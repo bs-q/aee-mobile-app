@@ -1,4 +1,4 @@
-package com.hq.remview.data.model.api.request;
+package com.bsq.aee.data.model.api.request;
 
 public abstract class BaseRequest {
     private Integer platform = 1;

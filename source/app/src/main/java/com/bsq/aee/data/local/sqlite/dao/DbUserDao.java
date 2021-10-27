@@ -1,4 +1,4 @@
-package com.hq.remview.data.local.sqlite.dao;
+package com.bsq.aee.data.local.sqlite.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,7 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import com.hq.remview.data.model.db.UserEntity;
+import com.bsq.aee.data.model.db.UserEntity;
 
 import java.util.List;
 

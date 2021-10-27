@@ -1,41 +1,11 @@
 <resources>
-    <string name="app_name">remview</string>
+    <string name="app_name">AEE</string>
     <string name="msg_loading">Xin chờ...</string>
 
     <!--Network error-->
     <string name="newtwork_error">Không thể kết nối, vui lòng kiểm tra kết nối mạng của bạn.</string>
     <string name="newtwork_error_button_retry">Thử lại</string>
     <string name="newtwork_error_button_exit">Thoát</string>
-<!--    main activity-->
-    <string name="format">%1$td.%1$tm.%1$tY %1$tH:%1$tM:%1$tS</string>
-    <string name="main_dialog_title">Xóa nhà hàng</string>
-    <string name="main_dialog_message">Bạn có thực sự muốn xóa nhà hàng này?</string>
-    <string name="main_dialog_confirm">Có</string>
-    <string name="main_dialog_cancel">Không</string>
-    <string name="scan_qr_code_message">Quét mã QR</string>
-    <string name="scan_qr_code_cancelled">Đã hủy việc quét mã QR</string>
-    <string name="restaurant_list">Danh sách nhà hàng</string>
-    <string name="selling_list">Danh sách bán</string>
-    <string name="connection_error">Lỗi kết nối, vui lòng thử lại</string>
-    <string name="session_timeout">Phiên làm việc đã hết hạn vui lòng scan lại QR Code</string>
-    <string name="bill_detail">Chi tiết</string>
-    <string name="qr_code_wrong_format">Mã QR không hợp lệ</string>
-    <string name="can_not_connect_to_server">Không thể kết nối tới server.</string>
-    <string name="retry_connect">Thử lại</string>
+    <string name="login_fail">Đăng nhập thất bại, vui lòng thử lại</string>
 
-    <string name="title_activity_main">activity_main</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="sales_report">Báo cáo bán hàng</string>
-    <string name="food_report">Báo cáo món ăn</string>
-    <string name="statistic_report">Phân tích thống kê</string>
-    <string name="scan_qr_success">Quét mã QR thành công</string>
 </resources>

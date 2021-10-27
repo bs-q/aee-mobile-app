@@ -1,9 +1,9 @@
-package com.hq.remview.data.local.sqlite;
+package com.bsq.aee.data.local.sqlite;
 
 import androidx.lifecycle.LiveData;
 
-import com.hq.remview.data.model.db.RestaurantEntity;
-import com.hq.remview.data.model.db.UserEntity;
+import com.bsq.aee.data.model.db.RestaurantEntity;
+import com.bsq.aee.data.model.db.UserEntity;
 
 import java.util.List;
 

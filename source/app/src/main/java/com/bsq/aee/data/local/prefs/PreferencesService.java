@@ -1,4 +1,4 @@
-package com.hq.remview.data.local.prefs;
+package com.bsq.aee.data.local.prefs;
 
 import android.content.SharedPreferences;
 

@@ -1,11 +1,11 @@
-package com.hq.remview.data.model.api;
+package com.bsq.aee.data.model.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializer;
-import com.hq.remview.data.model.api.request.BaseRequest;
-import com.hq.remview.data.model.api.response.BaseResponse;
+import com.bsq.aee.data.model.api.request.BaseRequest;
+import com.bsq.aee.data.model.api.response.BaseResponse;
 
 import java.lang.reflect.Type;
 

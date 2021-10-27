@@ -1,12 +1,12 @@
-package com.hq.remview.di.component;
+package com.bsq.aee.di.component;
 
 
 import android.app.Application;
 import android.content.Context;
 
-import com.hq.remview.MVVMApplication;
-import com.hq.remview.data.Repository;
-import com.hq.remview.di.module.AppModule;
+import com.bsq.aee.MVVMApplication;
+import com.bsq.aee.data.Repository;
+import com.bsq.aee.di.module.AppModule;
 
 import javax.inject.Singleton;
 

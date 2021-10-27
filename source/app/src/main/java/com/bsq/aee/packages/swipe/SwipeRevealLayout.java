@@ -1,4 +1,4 @@
-package com.hq.remview.packages.swipe;
+package com.bsq.aee.packages.swipe;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -16,7 +16,7 @@ import androidx.core.view.GestureDetectorCompat;
 import androidx.core.view.ViewCompat;
 import androidx.customview.widget.ViewDragHelper;
 
-import com.hq.remview.R;
+import com.bsq.aee.R;
 
 @SuppressLint("RtlHardcoded")
 public class SwipeRevealLayout extends ViewGroup {

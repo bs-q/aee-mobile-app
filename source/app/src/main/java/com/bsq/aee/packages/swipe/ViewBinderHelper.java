@@ -1,4 +1,4 @@
-package com.hq.remview.packages.swipe; /**
+package com.bsq.aee.packages.swipe; /**
  The MIT License (MIT)
 
  Copyright (c) 2016 Chau Thai

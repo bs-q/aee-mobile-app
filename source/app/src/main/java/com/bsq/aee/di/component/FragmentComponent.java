@@ -1,8 +1,8 @@
-package com.hq.remview.di.component;
+package com.bsq.aee.di.component;
 
 
-import com.hq.remview.di.module.FragmentModule;
-import com.hq.remview.di.scope.FragmentScope;
+import com.bsq.aee.di.module.FragmentModule;
+import com.bsq.aee.di.scope.FragmentScope;
 
 import dagger.Component;
 

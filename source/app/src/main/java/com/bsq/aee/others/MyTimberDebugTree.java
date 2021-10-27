@@ -1,4 +1,4 @@
-package com.hq.remview.others;
+package com.bsq.aee.others;
 
 import timber.log.Timber;
 

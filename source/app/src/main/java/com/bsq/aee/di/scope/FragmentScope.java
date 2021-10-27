@@ -1,4 +1,4 @@
-package com.hq.remview.di.scope;
+package com.bsq.aee.di.scope;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

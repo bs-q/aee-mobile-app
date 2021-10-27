@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.hq.remview"
+        applicationId "com.bsq.aee"
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
@@ -15,13 +15,13 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        //buildConfigField "String", "BASE_URL", "\"https://remview.site.dev.developteam.net\""
-        //buildConfigField "String", "BASE_URL", "\"https://mobile.remview.de\""
+        //buildConfigField "String", "BASE_URL", "\"https://aee.site.dev.developteam.net\""
+        //buildConfigField "String", "BASE_URL", "\"https://mobile.aee.de\""
     }
 
     buildTypes {
         debug {
-            buildConfigField "String", "BASE_URL", "\"https://remview-site-dev.developteam.net\""
+            buildConfigField "String", "BASE_URL", "\"https://aee-site-dev.developteam.net\""
             //minifyEnabled true
             //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             firebaseCrashlytics {
@@ -32,7 +32,7 @@ android {
         }
 
         release {
-            buildConfigField "String", "BASE_URL", "\"https://mobile.remview.de\""
+            buildConfigField "String", "BASE_URL", "\"https://mobile.aee.de\""
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -54,12 +54,12 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
 
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -127,19 +127,16 @@ dependencies {
 
     //Firebase authentication
     implementation 'com.google.firebase:firebase-auth'
-    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation 'com.facebook.android:facebook-login:8.1.0'
 
     // lib for SMS verification (Phone Auth)
-    implementation 'com.google.android.gms:play-services-auth:19.0.0'
-    implementation 'com.google.android.gms:play-services-auth-api-phone:17.5.0'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.5.1'
     
     // map
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
     implementation 'com.google.android.gms:play-services-location:18.0.0'
-
-    //zxing
-    implementation 'com.journeyapps:zxing-android-embedded:4.2.0'
 
     //web view
     implementation 'androidx.webkit:webkit:1.4.0'

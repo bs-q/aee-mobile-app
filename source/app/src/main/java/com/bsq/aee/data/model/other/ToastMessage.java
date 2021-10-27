@@ -1,4 +1,4 @@
-package com.hq.remview.data.model.other;
+package com.bsq.aee.data.model.other;
 
 import android.content.Context;
 

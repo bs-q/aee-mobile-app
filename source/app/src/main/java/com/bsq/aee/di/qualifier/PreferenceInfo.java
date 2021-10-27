@@ -1,4 +1,4 @@
-package com.hq.remview.di.qualifier;
+package com.bsq.aee.di.qualifier;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

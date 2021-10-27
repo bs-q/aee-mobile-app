@@ -1,8 +1,8 @@
-package com.hq.remview.di.module;
+package com.bsq.aee.di.module;
 
-import com.hq.remview.data.Repository;
-import com.hq.remview.di.scope.FragmentScope;
-import com.hq.remview.ui.base.fragment.BaseFragment;
+import com.bsq.aee.data.Repository;
+import com.bsq.aee.di.scope.FragmentScope;
+import com.bsq.aee.ui.base.fragment.BaseFragment;
 
 import javax.inject.Named;
 

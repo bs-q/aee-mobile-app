@@ -1,6 +1,4 @@
-package com.hq.remview.data.model.api.response;
-
-import java.util.Date;
+package com.bsq.aee.data.model.api.response;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -8,10 +6,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 @Data
 public class LoginResponse extends BaseResponse{
-    private String username;
     private String token;
     private String fullName;
-    private long id;
-    private Date expired;
-    private Integer kind;
+    private String avatarPath;
 }

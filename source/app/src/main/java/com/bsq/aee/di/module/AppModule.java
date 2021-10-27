@@ -1,24 +1,24 @@
-package com.hq.remview.di.module;
+package com.bsq.aee.di.module;
 
 import android.app.Application;
 import android.content.Context;
 
 import androidx.room.Room;
 
-import com.hq.remview.BuildConfig;
-import com.hq.remview.constant.Constants;
-import com.hq.remview.data.AppRepository;
-import com.hq.remview.data.Repository;
-import com.hq.remview.data.local.prefs.AppPreferencesService;
-import com.hq.remview.data.local.prefs.PreferencesService;
-import com.hq.remview.data.local.sqlite.AppDatabase;
-import com.hq.remview.data.local.sqlite.AppDbService;
-import com.hq.remview.data.local.sqlite.DbService;
-import com.hq.remview.data.remote.ApiService;
-import com.hq.remview.data.remote.AuthInterceptor;
-import com.hq.remview.di.qualifier.ApiInfo;
-import com.hq.remview.di.qualifier.DatabaseInfo;
-import com.hq.remview.di.qualifier.PreferenceInfo;
+import com.bsq.aee.BuildConfig;
+import com.bsq.aee.constant.Constants;
+import com.bsq.aee.data.AppRepository;
+import com.bsq.aee.data.Repository;
+import com.bsq.aee.data.local.prefs.AppPreferencesService;
+import com.bsq.aee.data.local.prefs.PreferencesService;
+import com.bsq.aee.data.local.sqlite.AppDatabase;
+import com.bsq.aee.data.local.sqlite.AppDbService;
+import com.bsq.aee.data.local.sqlite.DbService;
+import com.bsq.aee.data.remote.ApiService;
+import com.bsq.aee.data.remote.AuthInterceptor;
+import com.bsq.aee.di.qualifier.ApiInfo;
+import com.bsq.aee.di.qualifier.DatabaseInfo;
+import com.bsq.aee.di.qualifier.PreferenceInfo;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

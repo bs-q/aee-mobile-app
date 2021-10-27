@@ -1,4 +1,4 @@
-package com.hq.remview.constant;
+package com.bsq.aee.constant;
 
 public class Constants {
     public static final String DB_NAME = "mvvm.db";

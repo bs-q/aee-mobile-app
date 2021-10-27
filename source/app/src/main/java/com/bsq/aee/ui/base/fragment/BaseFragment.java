@@ -1,4 +1,4 @@
-package com.hq.remview.ui.base.fragment;
+package com.bsq.aee.ui.base.fragment;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -14,12 +14,12 @@ import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.Fragment;
 
-import com.hq.remview.MVVMApplication;
-import com.hq.remview.R;
-import com.hq.remview.di.component.DaggerFragmentComponent;
-import com.hq.remview.di.component.FragmentComponent;
-import com.hq.remview.di.module.FragmentModule;
-import com.hq.remview.utils.DialogUtils;
+import com.bsq.aee.MVVMApplication;
+import com.bsq.aee.R;
+import com.bsq.aee.di.component.DaggerFragmentComponent;
+import com.bsq.aee.di.component.FragmentComponent;
+import com.bsq.aee.di.module.FragmentModule;
+import com.bsq.aee.utils.DialogUtils;
 
 import javax.inject.Inject;
 import javax.inject.Named;

@@ -1,4 +1,4 @@
-package com.hq.remview.data.local.sqlite.converter;
+package com.bsq.aee.data.local.sqlite.converter;
 
 import androidx.room.TypeConverter;
 

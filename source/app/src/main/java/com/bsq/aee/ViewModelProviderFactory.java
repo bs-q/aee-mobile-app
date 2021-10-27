@@ -1,4 +1,4 @@
-package com.hq.remview;
+package com.bsq.aee;
 
 import androidx.annotation.NonNull;
 import androidx.core.util.Supplier;

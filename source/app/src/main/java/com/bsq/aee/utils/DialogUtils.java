@@ -1,4 +1,4 @@
-package com.hq.remview.utils;
+package com.bsq.aee.utils;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.hq.remview.R;
+import com.bsq.aee.R;
 
 public class DialogUtils {
 

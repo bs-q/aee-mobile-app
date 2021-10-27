@@ -1,4 +1,4 @@
-package com.hq.remview.utils;
+package com.bsq.aee.utils;
 
 import android.app.Application;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.hq.remview.ui.base.activity;
+package com.bsq.aee.ui.base.activity;
 
 import android.annotation.TargetApi;
 import android.app.Dialog;
@@ -20,13 +20,13 @@ import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ViewDataBinding;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.hq.remview.MVVMApplication;
-import com.hq.remview.R;
-import com.hq.remview.constant.Constants;
-import com.hq.remview.di.component.ActivityComponent;
-import com.hq.remview.di.component.DaggerActivityComponent;
-import com.hq.remview.di.module.ActivityModule;
-import com.hq.remview.utils.DialogUtils;
+import com.bsq.aee.MVVMApplication;
+import com.bsq.aee.R;
+import com.bsq.aee.constant.Constants;
+import com.bsq.aee.di.component.ActivityComponent;
+import com.bsq.aee.di.component.DaggerActivityComponent;
+import com.bsq.aee.di.module.ActivityModule;
+import com.bsq.aee.utils.DialogUtils;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -60,7 +60,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, V extends BaseView
         performDependencyInjection(getBuildComponent());
         super.onCreate(savedInstanceState);
         performDataBinding();
-        updateCurrentAcitivity();
+        updateCurrentActivity();
 
         viewModel.setToken(token);
         viewModel.setDeviceId(deviceId);
@@ -101,7 +101,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, V extends BaseView
     protected void onResume() {
         super.onResume();
         LocalBroadcastManager.getInstance(this).registerReceiver(globalApplicationReceiver, filterGlobalApplication);
-        updateCurrentAcitivity();
+        updateCurrentActivity();
     }
 
     @Override
@@ -168,7 +168,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, V extends BaseView
 
     public abstract void performDependencyInjection(ActivityComponent buildComponent);
 
-    private void updateCurrentAcitivity(){
+    private void updateCurrentActivity(){
         MVVMApplication mvvmApplication = (MVVMApplication)application;
         mvvmApplication.setCurrentActivity(this);
     }

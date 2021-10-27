@@ -4,7 +4,137 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b864215e-fbef-429c-b5ea-3d75389d33e6" name="Default Changelist" comment="init" />
+    <list default="true" id="b864215e-fbef-429c-b5ea-3d75389d33e6" name="Default Changelist" comment="init">
+      <change afterPath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_create_account.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_google.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_main_logo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_not_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/androidTest/java/com/hq/remview/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/MVVMApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/MVVMApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ViewModelProviderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ViewModelProviderFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/constant/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/AppRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/AppRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/prefs/AppPreferencesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/prefs/AppPreferencesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/prefs/PreferencesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/prefs/PreferencesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/AppDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/AppDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/AppDbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/AppDbService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/DbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/DbService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/converter/Converters.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/converter/Converters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/dao/DbRestaurantDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/dao/DbRestaurantDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/dao/DbUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/local/sqlite/dao/DbUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/ApiModelUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/ApiModelUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/ResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/ResponseCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/ResponseListObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/ResponseListObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/ResponseWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/ResponseWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/BaseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/BaseRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/CreateAccountRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/CreateAccountRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/NavigationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/NavigationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/ToggleCalendarRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/ToggleCalendarRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/VerifyQRCodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/VerifyQRCodeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/VerifyTokenRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/VerifyTokenRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/WebQRCodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/request/WebQRCodeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/response/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/response/BaseResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/response/BaseSocketResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/response/BaseSocketResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/response/CreateAccountResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/response/CreateAccountResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/response/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/response/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/response/VerifyQRCodeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/api/response/VerifyQRCodeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/db/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/db/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/db/RestaurantEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/db/RestaurantEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/db/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/db/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/other/ToastMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/model/other/ToastMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/remote/ApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/remote/ApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/remote/AuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/data/remote/AuthInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/component/ActivityComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/component/ActivityComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/component/AppComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/component/AppComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/component/FragmentComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/component/FragmentComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/module/ActivityModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/module/ActivityModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/module/AppModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/module/AppModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/module/FragmentModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/module/FragmentModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/qualifier/ApiInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/qualifier/ApiInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/qualifier/DatabaseInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/qualifier/DatabaseInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/qualifier/PreferenceInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/qualifier/PreferenceInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/scope/ActivityScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/scope/ActivityScope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/scope/FragmentScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/di/scope/FragmentScope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/others/MyTimberDebugTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/others/MyTimberDebugTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/others/MyTimberReleaseTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/others/MyTimberReleaseTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/packages/swipe/SwipeRevealLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/packages/swipe/SwipeRevealLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/packages/swipe/ViewBinderHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/packages/swipe/ViewBinderHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/account/login/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/account/login/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/BaseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/BaseForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/activity/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/activity/BaseActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/activity/BaseCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/activity/BaseCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/activity/BaseViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/activity/BaseViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/adapter/OnItemClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/adapter/OnItemClickListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/fragment/BaseFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/fragment/BaseFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/fragment/BaseFragmentViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/base/fragment/BaseFragmentViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/main/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/main/MainCalback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/main/MainViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/main/adapter/MainAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/main/adapter/MainItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/main/scanner/CustomScanner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/main/webview/WebViewInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/ui/main/webview/WebViewPath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/AppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/AppUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/DeviceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/DeviceUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/DialogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/DialogUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/DisplayUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/DisplayUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/GetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/GetInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/ImageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/ImageUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/LogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/NetworkUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/NetworkUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/ScreenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/java/com/bsq/aee/utils/ScreenUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/color/bottom_nav_color.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/color/revenue_chip_selector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/color/revenue_chip_text.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/add_restaurant_button_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/button_border.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_back.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_calendar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_cloud_off.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_delete.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_note.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_qr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_qrbig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_restaurant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_restaurant_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/ic_statistic.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/laptop.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/list_selected.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/note.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/note_selected.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/pc_qr_scan.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/restaurant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/statistic.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/drawable/statistic_selected.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/font/application_font.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/res/font/application_font.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/font/sf_bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/font/sf_bold_1.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/font/sf_bold_italic.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/font/sf_italic.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/font/sf_regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/layout/layout_progressbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/res/layout/layout_progressbar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/layout/restaurant_item_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/layout/scanner_fullscreen.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app/src/test/java/com/hq/remview/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/source/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +151,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="F:/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
@@ -33,8 +165,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1633660953126</updated>
+      <workItem from="1634611333071" duration="357000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -58,6 +194,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="462" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1633661145164">

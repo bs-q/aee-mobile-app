@@ -1,4 +1,4 @@
-package com.hq.remview.ui.base.adapter;
+package com.bsq.aee.ui.base.adapter;
 
 public interface OnItemClickListener {
     void onItemClick(int position);

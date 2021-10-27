@@ -1,8 +1,8 @@
-package com.hq.remview.data;
+package com.bsq.aee.data;
 
-import com.hq.remview.data.local.prefs.PreferencesService;
-import com.hq.remview.data.local.sqlite.DbService;
-import com.hq.remview.data.remote.ApiService;
+import com.bsq.aee.data.local.prefs.PreferencesService;
+import com.bsq.aee.data.local.sqlite.DbService;
+import com.bsq.aee.data.remote.ApiService;
 
 
 public interface Repository {

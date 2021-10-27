@@ -1,14 +1,14 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.Bridge">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
-        <item name="fontFamily">@font/application_font</item>
+<!--        <item name="fontFamily">@font/application_font</item>-->
         <item name="android:fontFamily">@font/application_font</item>
         <item name="windowActionBar">false</item>
-        <item name="android:windowBackground">@color/primary_color</item>
+        <item name="android:windowBackground">@color/background</item>
         <!-- navigation icon color -->
-        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlNormal">@color/background</item>
         <item name="windowNoTitle">true</item>
     </style>
 

@@ -1,4 +1,4 @@
-package com.hq.remview.utils;
+package com.bsq.aee.utils;
 
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;

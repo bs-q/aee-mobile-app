@@ -6,40 +6,40 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/sf_regular"
+        android:font="@font/opensans"
 
         app:fontStyle="normal"
         app:fontWeight="400"
-        app:font="@font/sf_regular"/>
+        app:font="@font/opensans"/>
 
     <!-- android API 26+ -> android:fontStyle     16+ -> app:fontStyle -->
     <font
         android:fontStyle="normal"
         android:fontWeight="700"
-        android:font="@font/sf_bold"
+        android:font="@font/opensans"
 
         app:fontStyle="normal"
         app:fontWeight="700"
-        app:font="@font/sf_bold"/>
+        app:font="@font/opensans"/>
 
 
     <!-- android API 26+ -> android:fontStyle     16+ -> app:fontStyle -->
     <font
         android:fontStyle="italic"
         android:fontWeight="400"
-        android:font="@font/sf_italic"
+        android:font="@font/opensans_italic"
 
         app:fontStyle="italic"
         app:fontWeight="400"
-        app:font="@font/sf_italic"/>
+        app:font="@font/opensans_italic"/>
 
     <!-- android API 26+ -> android:fontStyle     16+ -> app:fontStyle -->
     <font
         android:fontStyle="italic"
         android:fontWeight="700"
-        android:font="@font/sf_bold_italic"
+        android:font="@font/opensans_italic"
 
         app:fontStyle="italic"
         app:fontWeight="700"
-        app:font="@font/sf_italic"/>
+        app:font="@font/opensans_italic"/>
 </font-family>

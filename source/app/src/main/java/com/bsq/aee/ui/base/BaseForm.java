@@ -1,4 +1,4 @@
-package com.hq.remview.ui.base;
+package com.bsq.aee.ui.base;
 
 import androidx.databinding.BaseObservable;
 

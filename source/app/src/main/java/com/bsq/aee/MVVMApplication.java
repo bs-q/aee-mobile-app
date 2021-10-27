@@ -1,15 +1,13 @@
-package com.hq.remview;
+package com.bsq.aee;
 
 import android.app.Application;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.hq.remview.di.component.AppComponent;
-import com.hq.remview.di.component.DaggerAppComponent;
-import com.hq.remview.others.MyTimberDebugTree;
-import com.hq.remview.others.MyTimberReleaseTree;
-import com.hq.remview.utils.DialogUtils;
-import com.google.firebase.crashlytics.FirebaseCrashlytics;
+import com.bsq.aee.di.component.AppComponent;
+import com.bsq.aee.di.component.DaggerAppComponent;
+import com.bsq.aee.others.MyTimberDebugTree;
+import com.bsq.aee.utils.DialogUtils;
 
 import es.dmoral.toasty.Toasty;
 import io.reactivex.rxjava3.subjects.PublishSubject;
@@ -28,15 +26,8 @@ public class MVVMApplication extends Application{
     public void onCreate() {
         super.onCreate();
 
-        // Enable firebase log
-        FirebaseCrashlytics firebaseCrashlytics = FirebaseCrashlytics.getInstance();
-        firebaseCrashlytics.setCrashlyticsCollectionEnabled(true);
-
-
-        if (BuildConfig.DEBUG) {
+        if (com.bsq.aee.BuildConfig.DEBUG) {
             Timber.plant(new MyTimberDebugTree());
-        }else{
-            Timber.plant(new MyTimberReleaseTree(firebaseCrashlytics));
         }
 
         appComponent = DaggerAppComponent.builder()

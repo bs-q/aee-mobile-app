@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hq.remview">
+    package="com.bsq.aee">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -32,7 +32,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAbgWMc4w9mE1C5nEVpLaM6ZUgV7qyvV0s" />
-        <activity android:name=".ui.main.MainActivity"
+        <activity android:name=".ui.account.login.LoginActivity"
             android:theme="@style/AppTheme"
             >
             <intent-filter>
@@ -41,10 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.main.scanner.CustomScanner"
-            android:screenOrientation="fullSensor"
-            tools:replace="screenOrientation" />
 
         <meta-data
             android:name="com.google.android.gms.version"

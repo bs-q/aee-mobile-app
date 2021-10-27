@@ -1,13 +1,13 @@
-package com.hq.remview.data.remote;
+package com.bsq.aee.data.remote;
 
 import android.app.Application;
 import android.content.Intent;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.hq.remview.constant.Constants;
-import com.hq.remview.data.local.prefs.PreferencesService;
-import com.hq.remview.utils.LogService;
+import com.bsq.aee.constant.Constants;
+import com.bsq.aee.data.local.prefs.PreferencesService;
+import com.bsq.aee.utils.LogService;
 
 import org.jetbrains.annotations.NotNull;
 

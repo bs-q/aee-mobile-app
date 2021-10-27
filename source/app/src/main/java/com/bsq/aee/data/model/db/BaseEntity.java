@@ -1,4 +1,4 @@
-package com.hq.remview.data.model.db;
+package com.bsq.aee.data.model.db;
 
 public class BaseEntity {
 

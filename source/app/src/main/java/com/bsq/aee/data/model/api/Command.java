@@ -1,4 +1,4 @@
-package com.hq.remview.data.model.api;
+package com.bsq.aee.data.model.api;
 
 public class Command {
     public static final String CMD_VERIFY_QRCODE = "CMD_VERIFY_QRCODE";

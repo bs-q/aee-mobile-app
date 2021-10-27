@@ -1,11 +1,11 @@
-package com.hq.remview.data.local.prefs;
+package com.bsq.aee.data.local.prefs;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.hq.remview.constant.Constants;
-import com.hq.remview.di.qualifier.PreferenceInfo;
-import com.hq.remview.utils.LogService;
+import com.bsq.aee.constant.Constants;
+import com.bsq.aee.di.qualifier.PreferenceInfo;
+import com.bsq.aee.utils.LogService;
 import com.google.gson.Gson;
 import com.google.gson.internal.Primitives;
 

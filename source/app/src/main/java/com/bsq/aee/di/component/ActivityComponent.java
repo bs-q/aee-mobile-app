@@ -1,15 +1,15 @@
-package com.hq.remview.di.component;
+package com.bsq.aee.di.component;
 
-import com.hq.remview.di.module.ActivityModule;
-import com.hq.remview.di.scope.ActivityScope;
-import com.hq.remview.ui.main.MainActivity;
+import com.bsq.aee.di.module.ActivityModule;
+import com.bsq.aee.di.scope.ActivityScope;
+import com.bsq.aee.ui.account.login.LoginActivity;
 
 import dagger.Component;
 
 @ActivityScope
 @Component(modules = {ActivityModule.class}, dependencies = AppComponent.class)
 public interface ActivityComponent {
-    void inject(MainActivity activity);
 
+    void inject(LoginActivity activity);
 }
 

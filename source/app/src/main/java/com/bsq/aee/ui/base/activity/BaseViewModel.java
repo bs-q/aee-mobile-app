@@ -1,12 +1,12 @@
-package com.hq.remview.ui.base.activity;
+package com.bsq.aee.ui.base.activity;
 
 import androidx.databinding.ObservableBoolean;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.hq.remview.MVVMApplication;
-import com.hq.remview.data.Repository;
-import com.hq.remview.data.model.other.ToastMessage;
+import com.bsq.aee.MVVMApplication;
+import com.bsq.aee.data.Repository;
+import com.bsq.aee.data.model.other.ToastMessage;
 
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import lombok.Setter;
