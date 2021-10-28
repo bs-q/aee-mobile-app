@@ -7,5 +7,13 @@
     <string name="newtwork_error_button_retry">Thử lại</string>
     <string name="newtwork_error_button_exit">Thoát</string>
     <string name="login_fail">Đăng nhập thất bại, vui lòng thử lại</string>
+    <string name="login">Đăng nhập</string>
+    <string name="email">Email</string>
+    <string name="password">Mật khẩu</string>
+    <string name="continue_with_google">Sử dụng tài khoản google</string>
+    <string name="registration">Đăng kí</string>
+    <string name="login_error">Đăng nhập thất bại</string>
+    <string name="api_error">Có lỗi xảy ra, vui lòng thử lại ít phút</string>
+    <string name="wrong_email_password">Email/Mật khẩu không chính xác</string>
 
 </resources>

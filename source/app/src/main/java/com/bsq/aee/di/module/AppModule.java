@@ -11,9 +11,6 @@ import com.bsq.aee.data.AppRepository;
 import com.bsq.aee.data.Repository;
 import com.bsq.aee.data.local.prefs.AppPreferencesService;
 import com.bsq.aee.data.local.prefs.PreferencesService;
-import com.bsq.aee.data.local.sqlite.AppDatabase;
-import com.bsq.aee.data.local.sqlite.AppDbService;
-import com.bsq.aee.data.local.sqlite.DbService;
 import com.bsq.aee.data.remote.ApiService;
 import com.bsq.aee.data.remote.AuthInterceptor;
 import com.bsq.aee.di.qualifier.ApiInfo;
@@ -59,19 +56,6 @@ public class AppModule {
     @Singleton
     Gson provideGson() {
         return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-    }
-
-    @Provides
-    @Singleton
-    AppDatabase provideAppDatabase(@DatabaseInfo String dbName, Context context) {
-        return Room.databaseBuilder(context, AppDatabase.class, dbName).fallbackToDestructiveMigration()
-                .build();
-    }
-
-    @Provides
-    @Singleton
-    DbService provideDbService(AppDbService appDbService) {
-        return appDbService;
     }
 
 
