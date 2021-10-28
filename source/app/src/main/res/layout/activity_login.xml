@@ -71,7 +71,7 @@
                     app:boxStrokeErrorColor="@color/error_text">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:text="@{vm.mEmail}"
+                        android:text="@={vm.mEmail}"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/dark_gray_text" />
@@ -92,7 +92,9 @@
                     app:passwordToggleEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:text="@{vm.mPassword}"
+                        android:text="@={vm.mPassword}"
+                        android:inputType="textPassword"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/dark_gray_text" />
