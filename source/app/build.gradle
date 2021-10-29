@@ -21,7 +21,7 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField "String", "BASE_URL", "\"https://aee-site-dev.developteam.net\""
+            buildConfigField "String", "BASE_URL", "\"https://10.0.2.2:8080/api/\""
             //minifyEnabled true
             //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             firebaseCrashlytics {
@@ -32,7 +32,7 @@ android {
         }
 
         release {
-            buildConfigField "String", "BASE_URL", "\"https://mobile.aee.de\""
+            buildConfigField "String", "BASE_URL", "\"https://10.0.2.2:8080/api/\""
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
