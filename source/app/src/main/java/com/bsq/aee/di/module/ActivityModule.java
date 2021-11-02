@@ -10,6 +10,7 @@ import com.bsq.aee.ViewModelProviderFactory;
 import com.bsq.aee.data.Repository;
 import com.bsq.aee.di.scope.ActivityScope;
 import com.bsq.aee.ui.account.login.LoginViewModel;
+import com.bsq.aee.ui.account.register.RegisterViewModel;
 import com.bsq.aee.ui.base.activity.BaseActivity;
 import com.bsq.aee.utils.GetInfo;
 
@@ -47,6 +48,14 @@ public class ActivityModule {
         Supplier<LoginViewModel> supplier = () -> new LoginViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<LoginViewModel> factory = new ViewModelProviderFactory<>(LoginViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(LoginViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    RegisterViewModel provideRegisterViewModel(Repository repository, Context application) {
+        Supplier<RegisterViewModel> supplier = () -> new RegisterViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<RegisterViewModel> factory = new ViewModelProviderFactory<>(RegisterViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(RegisterViewModel.class);
     }
 
 }

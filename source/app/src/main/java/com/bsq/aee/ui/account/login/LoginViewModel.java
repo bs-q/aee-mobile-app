@@ -4,7 +4,9 @@ import androidx.databinding.ObservableField;
 
 import com.bsq.aee.MVVMApplication;
 import com.bsq.aee.data.Repository;
+import com.bsq.aee.data.model.api.request.CheckAccountRequest;
 import com.bsq.aee.data.model.api.request.LoginRequest;
+import com.bsq.aee.data.model.api.request.LoginWithGoogleRequest;
 import com.bsq.aee.ui.base.activity.BaseCallback;
 import com.bsq.aee.ui.base.activity.BaseViewModel;
 
@@ -15,9 +17,32 @@ public class LoginViewModel extends BaseViewModel {
 
     public ObservableField<String> mEmail = new ObservableField<>();
     public ObservableField<String> mPassword = new ObservableField<>();
+    public String mFirebaseToken;
+    public String mFirebaseUID;
+    public String mGmail;
+    public String mAvatarPath;
+    public boolean loginWithGoogle = false;
 
     public LoginViewModel(Repository repository, MVVMApplication application) {
         super(repository, application);
+    }
+
+    public void checkRegister(BaseCallback callback){
+        CheckAccountRequest request = new CheckAccountRequest();
+        request.setFirebaseToken(mFirebaseToken);
+        request.setFirebaseUserId(mFirebaseUID);
+        compositeDisposable.add(
+                repository.getApiService().checkRegister(request)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(response ->{
+                            if (response.isResult()){
+                                callback.doSuccess();
+                            } else {
+                                callback.doFail();
+                            }
+                        },callback::doError)
+        );
     }
 
     public void doLogin(BaseCallback callback){
@@ -36,6 +61,23 @@ public class LoginViewModel extends BaseViewModel {
                         callback.doFail();
                     }
                 }, callback::doError)
+        );
+    }
+    public void doLoginWithGoogle(BaseCallback callback){
+        LoginWithGoogleRequest request = new LoginWithGoogleRequest();
+        request.setUid(mFirebaseUID);
+        compositeDisposable.add(
+                repository.getApiService().loginWithGoogle(request)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(response -> {
+                            if (response.isResult()){
+                                repository.setToken(repository.getToken());
+                                callback.doSuccess();
+                            } else {
+                                callback.doFail();
+                            }
+                        }, callback::doError)
         );
     }
 

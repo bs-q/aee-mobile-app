@@ -39,12 +39,6 @@ public class AppModule {
         return BuildConfig.BASE_URL;
     }
 
-    @Provides
-    @DatabaseInfo
-    @Singleton
-    String provideDatabaseName() {
-        return Constants.DB_NAME;
-    }
 
     @Provides
     @Singleton

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.bsq.aee.ui.account.register.RegisterViewModel" />
+
+        <variable
+            name="a"
+            type="com.bsq.aee.ui.account.register.RegisterActivity" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginVertical="@dimen/_30sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_create_account"/>
+            <TextView
+                android:layout_marginStart="@dimen/_21sdp"
+                android:textSize="@dimen/_24ssp"
+                android:fontFamily="@font/montserratalternates_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_account"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                style="@style/registerForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColorHint="@color/main_color"
+                app:boxStrokeColor="@color/form_color"
+                android:enabled="false"
+                app:boxStrokeErrorColor="@color/error_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:text="@={vm.mEmail}"
+                    android:hint="@string/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_gray_text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                style="@style/registerForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColorHint="@color/main_color"
+                app:boxStrokeColor="@color/form_color"
+                app:passwordToggleEnabled="true"
+                app:boxStrokeErrorColor="@color/error_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:text="@={vm.mPassword}"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_gray_text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/confirm_password"
+                style="@style/registerForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:passwordToggleEnabled="true"
+                android:textColorHint="@color/main_color"
+                app:boxStrokeColor="@color/form_color"
+                app:boxStrokeErrorColor="@color/error_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:text="@={vm.mConfirmPassword}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="@string/confirm_password"
+                    android:textColor="@color/dark_gray_text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:elevation="0dp"
+                android:fontFamily="@font/opensans"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/create_account"
+                android:textSize="@dimen/_12ssp"
+                android:onClick="@{(v)->a.onClick(v)}"
+                android:textStyle="bold"
+                app:backgroundTint="@color/main_color"
+                app:cornerRadius="@dimen/_20sdp" />
+            <LinearLayout
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:onClick="onClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/opensans"
+                    android:text="@string/already_have_account"
+                    android:textColor="@color/gray_text"
+                    android:textSize="@dimen/_12ssp" />
+                <TextView
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:id="@+id/login_btn"
+                    android:onClick="@{(v)->a.onClick(v)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/opensans"
+                    android:text="@string/login"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
