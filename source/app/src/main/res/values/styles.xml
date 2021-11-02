@@ -24,4 +24,14 @@
         <item name="android:fontFamily">@font/application_font</item>
     </style>
 
+    <style name="registerForm" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_20sdp</item>
+    </style>
+
 </resources>

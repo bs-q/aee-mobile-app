@@ -15,5 +15,11 @@
     <string name="login_error">Đăng nhập thất bại</string>
     <string name="api_error">Có lỗi xảy ra, vui lòng thử lại ít phút</string>
     <string name="wrong_email_password">Email/Mật khẩu không chính xác</string>
+    <string name="create_account">Tạo tài khoản</string>
+    <string name="confirm_password">Nhập lại mật khẩu</string>
+    <string name="already_have_account">Email đã được đăng kí</string>
+    <string name="password_not_match">Mật khẩu không khớp</string>
+    <string name="password_wrong_regex">Mật khẩu phải bao gồm cả chữ, số, viết hoa, viết thường và cả những kí tự đặc biệt</string>
+    <string name="create_account_success">Tạo tài khoản thành công</string>
 
 </resources>

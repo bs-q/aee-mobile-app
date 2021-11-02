@@ -60,18 +60,18 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/email"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    style="@style/registerForm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_16sdp"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:hint="@string/email"
                     android:textColorHint="@color/main_color"
-                    app:boxStrokeColor="@color/main_color"
+                    app:boxStrokeColor="@color/form_color"
                     app:boxStrokeErrorColor="@color/error_text">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:text="@={vm.mEmail}"
+                        android:hint="@string/email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/dark_gray_text" />
@@ -80,21 +80,20 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/password"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    style="@style/registerForm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_16sdp"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:hint="@string/password"
                     android:textColorHint="@color/main_color"
-                    app:boxStrokeColor="@color/main_color"
+                    app:boxStrokeColor="@color/form_color"
                     app:boxStrokeErrorColor="@color/error_text"
                     app:passwordToggleEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:text="@={vm.mPassword}"
                         android:inputType="textPassword"
-
+                        android:hint="@string/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/dark_gray_text" />
@@ -112,7 +111,7 @@
                     android:paddingVertical="@dimen/_10sdp"
                     android:text="@string/login"
                     android:textSize="@dimen/_12ssp"
-                    android:onClick="onClick"
+                    android:onClick="@{(v)->a.onClick(v)}"
                     android:textStyle="bold"
                     app:backgroundTint="@color/main_color"
                     app:cornerRadius="@dimen/_20sdp" />
@@ -157,9 +156,10 @@
                 <com.google.android.material.button.MaterialButton
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_48sdp"
                     android:layout_marginHorizontal="@dimen/_16sdp"
                     android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
                     android:fontFamily="@font/opensans"
                     android:paddingVertical="@dimen/_10sdp"
                     android:text="@string/continue_with_google"
@@ -171,19 +171,19 @@
                     app:icon="@drawable/ic_google"
                     app:iconGravity="textStart"
                     app:iconPadding="@dimen/_4sdp"
-                    android:onClick="onClick"
+                    android:onClick="@{(v)->a.onClick(v)}"
                     app:iconTint="@null"
                     app:strokeColor="@color/main_color"
                     android:id="@+id/login_with_google_btn"
                     app:strokeWidth="@dimen/_1sdp" />
 
                 <TextView
+                    android:layout_marginTop="@dimen/_3sdp"
                     android:id="@+id/register_btn"
-                    android:onClick="onClick"
+                    android:onClick="@{(v)->a.onClick(v)}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="@dimen/_10sdp"
                     android:fontFamily="@font/opensans"
                     android:text="@string/registration"
                     android:textColor="@color/main_color"

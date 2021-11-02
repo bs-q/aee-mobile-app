@@ -3,6 +3,7 @@ package com.bsq.aee.di.component;
 import com.bsq.aee.di.module.ActivityModule;
 import com.bsq.aee.di.scope.ActivityScope;
 import com.bsq.aee.ui.account.login.LoginActivity;
+import com.bsq.aee.ui.account.register.RegisterActivity;
 
 import dagger.Component;
 
@@ -11,5 +12,7 @@ import dagger.Component;
 public interface ActivityComponent {
 
     void inject(LoginActivity activity);
+
+    void inject(RegisterActivity activity);
 }
 
