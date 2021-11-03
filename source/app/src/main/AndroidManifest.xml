@@ -43,6 +43,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.account.register.RegisterActivity" />
+        <activity android:name=".ui.main.MainActivity"
+            android:exported="true"/>
 
         <meta-data
             android:name="com.google.android.gms.version"
