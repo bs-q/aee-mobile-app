@@ -60,4 +60,17 @@ public class BaseViewModel extends ViewModel {
     public void showErrorMessage(String message){
         mErrorMessage.setValue(new ToastMessage(ToastMessage.TYPE_ERROR,message));
     }
+
+    public String getFullName(){
+        return application.getFullName();
+    }
+    public void setFullName(String name){
+        application.setFullName(name);
+    }
+    public void setAvatarPath(String avatarPath){
+        application.setAvatarPath(avatarPath);
+    }
+    public String getAvatarPath(){
+        return application.getAvatarPath();
+    }
 }

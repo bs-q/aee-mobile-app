@@ -1,11 +1,13 @@
 package com.bsq.aee.data.remote;
 
+import com.bsq.aee.data.model.api.ResponseListObj;
 import com.bsq.aee.data.model.api.ResponseWrapper;
 import com.bsq.aee.data.model.api.request.CheckAccountRequest;
 import com.bsq.aee.data.model.api.request.CreateAccountRequest;
 import com.bsq.aee.data.model.api.request.LoginRequest;
 import com.bsq.aee.data.model.api.request.LoginWithGoogleRequest;
 import com.bsq.aee.data.model.api.response.LoginResponse;
+import com.bsq.aee.data.model.api.response.PostResponse;
 import com.bsq.aee.data.model.api.response.ProfileResponse;
 
 import io.reactivex.rxjava3.core.Observable;
@@ -13,6 +15,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface ApiService {
 
@@ -27,6 +30,10 @@ public interface ApiService {
     @GET("u/profile")
     @Headers({"IgnoreAuth: 1"})
     Observable<ResponseWrapper<ProfileResponse>> profile();
+
+    @GET("u/discussion/get-post")
+    Observable<ResponseListObj<PostResponse>> getPosts(@Query("size") Integer size,
+                                                       @Query("page") Integer page);
 
     @POST("auth/check-register")
     @Headers({"IgnoreAuth: 1"})

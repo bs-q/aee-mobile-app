@@ -5,6 +5,7 @@ import com.bsq.aee.di.scope.ActivityScope;
 import com.bsq.aee.ui.account.login.LoginActivity;
 import com.bsq.aee.ui.account.register.RegisterActivity;
 import com.bsq.aee.ui.main.MainActivity;
+import com.bsq.aee.ui.main.university.details.UniversityDetailsActivity;
 
 import dagger.Component;
 
@@ -17,5 +18,7 @@ public interface ActivityComponent {
     void inject(RegisterActivity activity);
 
     void inject(MainActivity activity);
+
+    void inject(UniversityDetailsActivity activity);
 }
 

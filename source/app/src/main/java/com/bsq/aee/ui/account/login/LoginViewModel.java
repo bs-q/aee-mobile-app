@@ -88,6 +88,9 @@ public class LoginViewModel extends BaseViewModel {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response ->{
                     if (response.isResult()){
+                        setToken(response.getData().getToken());
+                        setAvatarPath(response.getData().getAvatarPath());
+                        setFullName(response.getData().getFullName());
                         callback.doSuccess();
                     } else {
                         callback.doFail();

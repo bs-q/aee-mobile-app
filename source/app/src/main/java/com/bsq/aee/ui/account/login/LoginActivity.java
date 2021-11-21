@@ -16,6 +16,7 @@ import com.bsq.aee.di.component.ActivityComponent;
 import com.bsq.aee.ui.account.register.RegisterActivity;
 import com.bsq.aee.ui.base.activity.BaseActivity;
 import com.bsq.aee.ui.base.activity.BaseCallback;
+import com.bsq.aee.ui.main.MainActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -27,6 +28,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 import java.util.Objects;
+
+import timber.log.Timber;
 
 
 public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewModel> implements View.OnClickListener {
@@ -74,6 +77,34 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
         mGoogleSignInClient.signOut();
 
     });
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        doCheckOnStartUp();
+    }
+
+    private void doCheckOnStartUp() {
+        viewModel.showLoading();
+        viewModel.doProfile(new BaseCallback() {
+            @Override
+            public void doError(Throwable error) {
+                Timber.d(error);
+                viewModel.hideLoading();
+            }
+
+            @Override
+            public void doSuccess() {
+                viewModel.hideLoading();
+                navigateToMainActivity();
+            }
+
+            @Override
+            public void doFail() {
+                viewModel.hideLoading();
+            }
+        });
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -170,6 +201,11 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
         it.putExtra(LOGIN_UID,viewModel.mFirebaseUID);
         startActivity(it);
     }
+    private void navigateToMainActivity() {
+        Intent it = new Intent(this, MainActivity.class);
+        startActivity(it);
+        finish();
+    }
 
     @Override
     public void onClick(View view) {
@@ -211,8 +247,8 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
 
             @Override
             public void doSuccess() {
-                // TODO login success
                 viewModel.showSuccessMessage("Login success");
+                navigateToMainActivity();
             }
 
             @Override
@@ -221,6 +257,12 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
                 viewModel.showErrorMessage(getString(R.string.wrong_email_password));
             }
         });
+    }
+
+    private void navigateToMain(){
+        Intent it = new Intent(LoginActivity.this,MainActivity.class);
+        startActivity(it);
+        finish();
     }
 }
 

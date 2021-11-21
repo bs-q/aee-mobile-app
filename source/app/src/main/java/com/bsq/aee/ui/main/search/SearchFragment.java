@@ -20,7 +20,9 @@ public class SearchFragment extends BaseFragment<FragmentSearchBinding,SearchVie
 
     @Override
     protected void performDataBinding() {
-
+//        DividerItemDecoration gameDivider = new DividerItemDecoration(binding.featureGame.getContext(), DividerItemDecoration.HORIZONTAL);
+//        gameDivider.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(requireActivity(), R.drawable.horizontal_divider)));
+//        binding.featureGame.addItemDecoration(gameDivider);
     }
 
     @Override

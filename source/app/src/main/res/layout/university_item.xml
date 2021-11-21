@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="name"
+            type="String" />
+        <variable
+            name="shortDescription"
+            type="String" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardElevation="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        app:cardCornerRadius="@dimen/_12sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"/>
+            <TextView
+                android:text="@{name}"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:id="@+id/university_name"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:textSize="@dimen/_16ssp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:text="@{shortDescription}"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:id="@+id/university_short_description"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:textColor="@color/dark_gray_text"/>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

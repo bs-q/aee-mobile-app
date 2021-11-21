@@ -4,7 +4,8 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
 <!--        <item name="fontFamily">@font/application_font</item>-->
-        <item name="android:fontFamily">@font/application_font</item>
+        <item name="fontFamily">@font/opensans</item>
+        <item name="android:fontFamily">@font/opensans</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowBackground">@color/background</item>
         <!-- navigation icon color -->
@@ -32,6 +33,11 @@
     <style name="ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/_20sdp</item>
+    </style>
+
+    <style name="news_shape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12%</item>
     </style>
 
 </resources>

@@ -10,7 +10,7 @@ import com.bsq.aee.ui.base.fragment.BaseFragment;
 public class UniversityFragment extends BaseFragment<FragmentUniversityBinding,UniversityViewModel> {
     @Override
     public int getBindingVariable() {
-        return BR.a;
+        return BR.vm;
     }
 
     @Override

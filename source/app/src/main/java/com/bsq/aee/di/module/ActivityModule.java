@@ -13,6 +13,7 @@ import com.bsq.aee.ui.account.login.LoginViewModel;
 import com.bsq.aee.ui.account.register.RegisterViewModel;
 import com.bsq.aee.ui.base.activity.BaseActivity;
 import com.bsq.aee.ui.main.MainViewModel;
+import com.bsq.aee.ui.main.university.details.UniversityDetailsViewModel;
 import com.bsq.aee.utils.GetInfo;
 
 import javax.inject.Named;
@@ -65,6 +66,14 @@ public class ActivityModule {
         Supplier<MainViewModel> supplier = () -> new MainViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<MainViewModel> factory = new ViewModelProviderFactory<>(MainViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(MainViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    UniversityDetailsViewModel provideUniversityDetailsViewModel(Repository repository, Context application) {
+        Supplier<UniversityDetailsViewModel> supplier = () -> new UniversityDetailsViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<UniversityDetailsViewModel> factory = new ViewModelProviderFactory<>(UniversityDetailsViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(UniversityDetailsViewModel.class);
     }
 
 }

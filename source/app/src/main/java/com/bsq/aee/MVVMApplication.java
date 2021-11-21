@@ -22,6 +22,14 @@ public class MVVMApplication extends Application{
     @Getter
     private AppComponent appComponent;
 
+    @Getter
+    @Setter
+    private String fullName;
+
+    @Getter
+    @Setter
+    private String avatarPath;
+
     @Override
     public void onCreate() {
         super.onCreate();

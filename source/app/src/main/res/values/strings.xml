@@ -26,5 +26,7 @@
     <string name="search">Tìm kiếm</string>
     <string name="favorite">Yêu thích</string>
     <string name="account">Tài khoản</string>
+    <string name="university_info">Thông tin</string>
+    <string name="university_fields">Ngành đào tạo</string>
 
 </resources>
