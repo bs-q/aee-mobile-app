@@ -11,6 +11,7 @@
         <!-- navigation icon color -->
         <item name="colorControlNormal">@color/background</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorAccent">@color/gray_text</item>
     </style>
 
     <style name="CustomLoadingDialog" parent="Theme.AppCompat.Dialog">

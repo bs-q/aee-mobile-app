@@ -8,8 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/_8sdp">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="0dp"
@@ -32,12 +31,14 @@
                 android:src="@drawable/search_icon" />
 
             <EditText
+                android:inputType="textAutoComplete"
+                android:maxLines="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_4sdp"
                 android:layout_toEndOf="@id/search_icon"
-                android:background="null"
+                android:background="@null"
                 android:fontFamily="@font/opensans"
                 android:hint="Tìm kiếm bài viết"
                 android:textColor="@color/black"
