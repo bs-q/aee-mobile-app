@@ -4,6 +4,7 @@ import com.bsq.aee.data.model.api.ResponseListObj;
 import com.bsq.aee.data.model.api.ResponseWrapper;
 import com.bsq.aee.data.model.api.request.CheckAccountRequest;
 import com.bsq.aee.data.model.api.request.CreateAccountRequest;
+import com.bsq.aee.data.model.api.request.CreatePostRequest;
 import com.bsq.aee.data.model.api.request.LoginRequest;
 import com.bsq.aee.data.model.api.request.LoginWithGoogleRequest;
 import com.bsq.aee.data.model.api.response.LoginResponse;
@@ -28,12 +29,14 @@ public interface ApiService {
     Observable<ResponseWrapper<LoginResponse>> loginWithGoogle(@Body LoginWithGoogleRequest request);
 
     @GET("u/profile")
-    @Headers({"IgnoreAuth: 1"})
     Observable<ResponseWrapper<ProfileResponse>> profile();
 
-    @GET("u/discussion/get-post")
+    @GET("u/discussion/get-posts")
     Observable<ResponseListObj<PostResponse>> getPosts(@Query("size") Integer size,
-                                                       @Query("page") Integer page);
+                                                       @Query("currentPage") Integer page);
+
+    @POST("u/discussion/create-post")
+    Observable<ResponseWrapper<String>> createPost(@Body CreatePostRequest request);
 
     @POST("auth/check-register")
     @Headers({"IgnoreAuth: 1"})

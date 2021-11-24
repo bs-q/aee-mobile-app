@@ -28,5 +28,6 @@
     <string name="account">Tài khoản</string>
     <string name="university_info">Thông tin</string>
     <string name="university_fields">Ngành đào tạo</string>
+    <string name="date_format">%1$td/%1$tm/%1$tY</string>
 
 </resources>

@@ -40,5 +40,16 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">12%</item>
     </style>
-
+    <style name="avatarRound" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="post_title">
+        <item name="fontFamily">@font/montserratalternates_extrabold</item>
+        <item name="android:fontFamily">@font/montserratalternates_extrabold</item>
+    </style>
+    <style name="post_content">
+        <item name="fontFamily">@font/montserratalternates_medium</item>
+        <item name="android:fontFamily">@font/montserratalternates_medium</item>
+    </style>
 </resources>

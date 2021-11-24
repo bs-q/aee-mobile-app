@@ -30,14 +30,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostAdapterVie
 
     @Override
     public void onBindViewHolder(@NonNull PostAdapterViewHolder holder, int position) {
-
+        holder.layoutPostBinding.setItem(items.get(position));
         holder.layoutPostBinding.executePendingBindings();
     }
 
     @Override
     public int getItemCount() {
-        return 10;
-//        return items.size();
+        return items.size();
     }
 
     public static class PostAdapterViewHolder extends RecyclerView.ViewHolder {

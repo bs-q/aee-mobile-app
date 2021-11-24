@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="a"
+            type="com.bsq.aee.ui.main.search.create.CreatePostActivity" />
+
+        <variable
+            name="vm"
+            type="com.bsq.aee.ui.main.search.create.CreatePostViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            app:shapeAppearanceOverlay="@style/avatarRound"
+            app:glide_image="@{vm.avatarPath}"
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            app:layout_constraintTop_toTopOf="@id/content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="#4D9A9A9A"/>
+        <EditText
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@null"
+            android:layout_marginStart="@dimen/_6sdp"
+            style="@style/post_title"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/avatar"
+            app:layout_constraintStart_toEndOf="@id/avatar"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:maxLines="3"
+            android:text="@={vm.title}"
+            android:hint="Tiêu đề"/>
+        <EditText
+            style="@style/post_content"
+            android:padding="@dimen/_2sdp"
+            android:gravity="start"
+            android:background="@null"
+            android:paddingHorizontal="@dimen/_2sdp"
+            android:id="@+id/content"
+            app:layout_constraintTop_toBottomOf="@id/avatar"
+            app:layout_constraintStart_toStartOf="@id/avatar"
+            app:layout_constraintBottom_toTopOf="@id/post_btn"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:textSize="@dimen/_12ssp"
+            android:layout_height="0dp"
+            android:textAlignment="textStart"
+            android:hint="Nội dung"
+            android:text="@={vm.content}"
+            android:textStyle="bold"/>
+        <com.google.android.material.button.MaterialButton
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/post_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:elevation="0dp"
+            android:fontFamily="@font/opensans"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Đăng bài viết"
+            android:textSize="@dimen/_12ssp"
+            android:onClick="@{(v)->a.onClick(v)}"
+            android:textStyle="bold"
+            app:backgroundTint="@color/main_color"
+            app:cornerRadius="@dimen/_20sdp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

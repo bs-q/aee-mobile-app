@@ -55,7 +55,7 @@ public class LoginViewModel extends BaseViewModel {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response -> {
                     if (response.isResult()){
-                        repository.setToken(repository.getToken());
+                        repository.setToken(response.getData().getToken());
                         callback.doSuccess();
                     } else {
                         callback.doFail();

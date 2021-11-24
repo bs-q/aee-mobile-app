@@ -85,23 +85,21 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
     }
 
     private void doCheckOnStartUp() {
-        viewModel.showLoading();
         viewModel.doProfile(new BaseCallback() {
             @Override
             public void doError(Throwable error) {
                 Timber.d(error);
-                viewModel.hideLoading();
+                viewBinding.splashScreen.setVisibility(View.GONE);
             }
 
             @Override
             public void doSuccess() {
-                viewModel.hideLoading();
                 navigateToMainActivity();
             }
 
             @Override
             public void doFail() {
-                viewModel.hideLoading();
+                viewBinding.splashScreen.setVisibility(View.GONE);
             }
         });
     }

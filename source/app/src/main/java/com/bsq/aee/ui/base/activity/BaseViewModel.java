@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.bsq.aee.MVVMApplication;
 import com.bsq.aee.data.Repository;
+import com.bsq.aee.data.model.api.response.ProfileResponse;
 import com.bsq.aee.data.model.other.ToastMessage;
 
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
@@ -15,6 +16,7 @@ public class BaseViewModel extends ViewModel {
     protected CompositeDisposable compositeDisposable;
     protected final ObservableBoolean mIsLoading = new ObservableBoolean();
     protected final MutableLiveData<ToastMessage> mErrorMessage = new MutableLiveData<>();
+    protected ProfileResponse profileResponse;
 
     @Setter
     protected String token;

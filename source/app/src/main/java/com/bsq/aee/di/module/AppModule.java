@@ -96,7 +96,7 @@ public class AppModule {
         return new Retrofit.Builder()
                 .client(client)
                 .baseUrl(url)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm:ss").create()))
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .build();
     }
