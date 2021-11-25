@@ -13,6 +13,7 @@ import androidx.databinding.Observable;
 import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.Fragment;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.bsq.aee.MVVMApplication;
 import com.bsq.aee.R;
@@ -101,5 +102,4 @@ public abstract class BaseFragment <B extends ViewDataBinding,V extends BaseFrag
             progressDialog = null;
         }
     }
-
 }

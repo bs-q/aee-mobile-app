@@ -7,9 +7,9 @@ import lombok.Data;
 @Data
 public class ResponseListObj<T> {
     private List<T> data;
-    private Integer currentPage;
-    private Integer totalPages;
-    private Long totalItems;
+    private Integer currentPage = 0;
+    private Integer totalPages = 0;
+    private Integer totalItems = 0 ;
     private Integer oldIndex = -1;
 
     public boolean hasNext() {

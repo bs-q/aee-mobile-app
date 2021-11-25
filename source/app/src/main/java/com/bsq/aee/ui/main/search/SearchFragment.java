@@ -1,5 +1,6 @@
 package com.bsq.aee.ui.main.search;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,21 +14,25 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bsq.aee.R;
+import com.bsq.aee.data.model.api.ApiModelUtils;
+import com.bsq.aee.data.model.api.response.PostResponse;
 import com.bsq.aee.databinding.FragmentSearchBinding;
 import com.bsq.aee.di.component.FragmentComponent;
 import com.bsq.aee.ui.base.activity.BaseCallback;
 import com.bsq.aee.ui.base.fragment.BaseFragment;
 import com.bsq.aee.ui.main.search.adapter.PostAdapter;
 import com.bsq.aee.ui.main.search.create.CreatePostActivity;
+import com.bsq.aee.ui.main.search.detail.PostDetailActivity;
 
 import java.util.Objects;
 
 import timber.log.Timber;
 
 public class SearchFragment extends BaseFragment<FragmentSearchBinding,SearchViewModel>
-implements View.OnClickListener {
+implements View.OnClickListener, PostAdapter.PostClickListener {
 
     PostAdapter adapter;
+    public static final String POST_ITEM = "POST_ITEM";
 
     @Override
     public int getBindingVariable() {
@@ -78,7 +83,7 @@ implements View.OnClickListener {
         DividerItemDecoration divider = new DividerItemDecoration(requireActivity(), DividerItemDecoration.VERTICAL);
         divider.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(requireActivity(), R.drawable.vertical_divider)));
         binding.recyclerView.addItemDecoration(divider);
-        adapter = new PostAdapter();
+        adapter = new PostAdapter(this);
         adapter.setItems(viewModel.responseList.getData());
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
@@ -142,6 +147,13 @@ implements View.OnClickListener {
     }
     private void navigateToCreatePost(){
         Intent it = new Intent(requireActivity(), CreatePostActivity.class);
+        startActivity(it);
+    }
+
+    @Override
+    public void postClick(PostResponse item) {
+        Intent it = new Intent(requireActivity(), PostDetailActivity.class);
+        it.putExtra(POST_ITEM, ApiModelUtils.toJson(item));
         startActivity(it);
     }
 }

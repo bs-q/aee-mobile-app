@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:font="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="expanse"
+            type="androidx.databinding.ObservableBoolean" />
         <variable
             name="item"
             type="com.bsq.aee.data.model.api.response.PostResponse" />
@@ -17,11 +20,11 @@
         android:paddingVertical="@dimen/_1sdp">
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/root"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="@dimen/_8sdp"
             app:cardElevation="0dp"
-            android:id="@+id/root"
             app:cardPreventCornerOverlap="true"
             app:strokeColor="#4D9A9A9A"
             app:strokeWidth="@dimen/_1sdp">
@@ -103,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     style="@style/post_content"
-                    android:maxLines="2"
+                    android:maxLines="3"
                     android:paddingHorizontal="@dimen/_2sdp"
                     android:text="@{item.content}"
                     android:textColor="#A8A8A8"
@@ -112,10 +115,26 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@id/title"
                     app:layout_constraintTop_toBottomOf="@id/title" />
+                <ImageView
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:id="@+id/load_more"
+                    android:background="@drawable/load_more_up"
+                    android:src="@drawable/down_icon"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_6sdp"
+                    app:layout_constraintTop_toBottomOf="@id/content"
+                    app:layout_constraintStart_toStartOf="@id/content"
+                    app:layout_constraintEnd_toEndOf="@id/content"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
-
+        <TextView
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_below="@id/root"
+            android:text="Comment"
+            style="@style/semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </RelativeLayout>
 </layout>

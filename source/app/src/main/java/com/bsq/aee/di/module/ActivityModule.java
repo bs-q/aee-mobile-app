@@ -14,6 +14,7 @@ import com.bsq.aee.ui.account.register.RegisterViewModel;
 import com.bsq.aee.ui.base.activity.BaseActivity;
 import com.bsq.aee.ui.main.MainViewModel;
 import com.bsq.aee.ui.main.search.create.CreatePostViewModel;
+import com.bsq.aee.ui.main.search.detail.PostDetailViewModel;
 import com.bsq.aee.ui.main.university.details.UniversityDetailsViewModel;
 import com.bsq.aee.utils.GetInfo;
 
@@ -83,5 +84,13 @@ public class ActivityModule {
         Supplier<CreatePostViewModel> supplier = () -> new CreatePostViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<CreatePostViewModel> factory = new ViewModelProviderFactory<>(CreatePostViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(CreatePostViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    PostDetailViewModel providePostDetailViewModel(Repository repository, Context application) {
+        Supplier<PostDetailViewModel> supplier = () -> new PostDetailViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<PostDetailViewModel> factory = new ViewModelProviderFactory<>(PostDetailViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(PostDetailViewModel.class);
     }
 }
