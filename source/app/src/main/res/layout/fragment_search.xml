@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -13,37 +13,102 @@
             name="vm"
             type="com.bsq.aee.ui.main.search.SearchViewModel" />
     </data>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
-            android:paddingVertical="@dimen/_8sdp"
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_8sdp">
 
             <include
-                android:layout_marginHorizontal="@dimen/_8sdp"
+                app:search="@{vm.reply}"
+                app:listener="@{f}"
+                android:id="@+id/search_bar"
+                layout="@layout/layout_search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                layout="@layout/layout_search_bar"/>
+                android:layout_alignParentTop="true"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8ssp"
+                android:visibility="gone" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
-                tools:listitem="@layout/layout_post"
-                android:layout_marginTop="@dimen/_8sdp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:layout_above="@id/pagination_bar"
+                android:layout_below="@id/search_bar"
+                tools:listitem="@layout/layout_post" />
 
-        </LinearLayout>
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pagination_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/reply_bar"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_paging_button"
+                tools:orientation="horizontal" />
+
+            <include
+                app:reply="@{vm.reply}"
+                app:listener="@{f}"
+                android:visibility="gone"
+                android:id="@+id/reply_bar"
+                layout="@layout/layout_reply_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/_42sdp"
             android:layout_width="wrap_content"
-            android:backgroundTint="@color/main_color"
-            app:tint="@color/white"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:src="@drawable/add_icon"
-            android:onClick="@{(v)->f.onClick(v)}"
-            android:layout_margin="16dp"/>
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:backgroundTint="@color/main_color"
+                android:onClick="@{(v)->f.onClick(v)}"
+                android:src="@drawable/search_icon"
+                app:tint="@color/white" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:backgroundTint="@color/main_color"
+                android:onClick="@{(v)->f.onClick(v)}"
+                android:src="@drawable/chat_icon"
+                app:tint="@color/white" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:backgroundTint="@color/main_color"
+                android:onClick="@{(v)->f.onClick(v)}"
+                android:src="@drawable/add_icon"
+                app:tint="@color/white" />
+        </LinearLayout>
+
     </FrameLayout>
 </layout>

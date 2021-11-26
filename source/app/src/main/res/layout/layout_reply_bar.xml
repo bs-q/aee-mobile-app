@@ -4,7 +4,7 @@
 
     <data>
         <variable
-            name="search"
+            name="reply"
             type="androidx.databinding.ObservableField&lt;String>" />
         <variable
             name="listener"
@@ -21,10 +21,10 @@
             android:layout_marginEnd="@dimen/_8sdp"
             android:background="@drawable/search_box_background"
             android:paddingHorizontal="@dimen/_8sdp"
-            app:layout_constraintBottom_toBottomOf="@+id/search_btn"
-            app:layout_constraintEnd_toStartOf="@+id/search_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/reply_btn"
+            app:layout_constraintEnd_toStartOf="@+id/reply_btn"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/search_btn">
+            app:layout_constraintTop_toTopOf="@+id/reply_btn">
 
             <ImageView
                 android:id="@+id/search_icon"
@@ -32,10 +32,10 @@
                 android:layout_height="@dimen/_10sdp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/search_icon" />
+                android:src="@drawable/chat_icon" />
 
             <EditText
-                android:text="@={search}"
+                android:text="@={reply}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -43,7 +43,7 @@
                 android:layout_toEndOf="@id/search_icon"
                 android:background="@null"
                 android:fontFamily="@font/opensans"
-                android:hint="Tìm kiếm bài viết"
+                android:hint="Bình luận"
                 android:inputType="textAutoComplete"
                 android:maxLines="1"
                 android:textColor="@color/black"
@@ -51,17 +51,16 @@
                 android:textSize="@dimen/_8ssp" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/search_btn"
+        <ImageView
             android:onClick="@{(v)->listener.onClick(v)}"
-            style="@style/semibold"
+            android:id="@+id/reply_btn"
+            android:padding="@dimen/_4sdp"
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_26sdp"
             android:background="@drawable/search_btn_background"
             android:gravity="center"
-            android:text="Tìm kiếm"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_8ssp"
+            android:src="@drawable/reply_icon"
+            android:textSize="@dimen/_10ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="selected"
+            type="androidx.databinding.ObservableBoolean" />
+    </data>
+
+    <TextView
+        app:paging_button="@{selected}"
+        style="@style/semibold"
+        android:textSize="@dimen/_8ssp"
+        android:gravity="center"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp">
+    </TextView>
+</layout>

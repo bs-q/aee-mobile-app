@@ -92,8 +92,16 @@ implements View.OnClickListener, PostAdapter.PostClickListener {
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 //dy > 0: scroll up; dy < 0: scroll down
-                if (dy > 0) binding.fab.hide();
-                else binding.fab.show();
+                if (dy > 0) {
+                    binding.fab.hide();
+                    binding.search.hide();
+                    binding.reply.hide();
+                } else {
+                    binding.fab.show();
+                    binding.search.show();
+                    binding.reply.show();
+
+                }
                 super.onScrolled(recyclerView, dx, dy);
             }
         });
@@ -143,6 +151,17 @@ implements View.OnClickListener, PostAdapter.PostClickListener {
     public void onClick(View v) {
         if (v.getId() == R.id.fab){
             navigateToCreatePost();
+        } else if (v.getId() == R.id.search){
+            binding.searchBar.getRoot().setVisibility(
+                    binding.searchBar.getRoot().getVisibility() == View.GONE ? View.VISIBLE : View.GONE
+            );
+        } else if (v.getId() == R.id.search_btn){
+            Timber.d("search btn click");
+        } else if (v.getId() == R.id.reply_btn){
+            Timber.d("reply btn click");
+        } else if (v.getId() == R.id.reply){
+            binding.replyBar.getRoot().setVisibility(
+                    binding.replyBar.getRoot().getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
         }
     }
     private void navigateToCreatePost(){
