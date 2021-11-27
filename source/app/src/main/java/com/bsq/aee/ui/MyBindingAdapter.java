@@ -1,5 +1,6 @@
 package com.bsq.aee.ui;
 
+import android.graphics.Color;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
@@ -20,9 +21,9 @@ public class MyBindingAdapter {
                 .into(view);
     }
     @BindingAdapter("paging_button")
-    public static void pagination_button_state(TextView view, boolean selected){
+    public static void pagingButtonState(TextView view, boolean selected){
         if (selected){
-            view.setTextColor(ContextCompat.getColor(view.getContext(), R.color.white));
+            view.setTextColor(Color.WHITE);
             view.setBackground(ContextCompat.getDrawable(view.getContext(),R.drawable.pagination_background));
         } else {
             view.setTextColor(ContextCompat.getColor(view.getContext(), R.color.main_color));

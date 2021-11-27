@@ -20,6 +20,7 @@ import com.bsq.aee.databinding.FragmentSearchBinding;
 import com.bsq.aee.di.component.FragmentComponent;
 import com.bsq.aee.ui.base.activity.BaseCallback;
 import com.bsq.aee.ui.base.fragment.BaseFragment;
+import com.bsq.aee.ui.main.search.adapter.PageAdapter;
 import com.bsq.aee.ui.main.search.adapter.PostAdapter;
 import com.bsq.aee.ui.main.search.create.CreatePostActivity;
 import com.bsq.aee.ui.main.search.detail.PostDetailActivity;
@@ -29,9 +30,10 @@ import java.util.Objects;
 import timber.log.Timber;
 
 public class SearchFragment extends BaseFragment<FragmentSearchBinding,SearchViewModel>
-implements View.OnClickListener, PostAdapter.PostClickListener {
+        implements View.OnClickListener, PostAdapter.PostClickListener, PageAdapter.PagingButtonClickListener {
 
     PostAdapter adapter;
+    PageAdapter pageAdapter;
     public static final String POST_ITEM = "POST_ITEM";
 
     @Override
@@ -48,8 +50,6 @@ implements View.OnClickListener, PostAdapter.PostClickListener {
     protected void performDataBinding() {
         binding.setF(this);
         binding.setVm(viewModel);
-
-
     }
 
     @Override
@@ -69,6 +69,7 @@ implements View.OnClickListener, PostAdapter.PostClickListener {
             public void doSuccess() {
                 viewModel.hideLoading();
                 setUpAdapter();
+                setUpPageAdapter();
             }
 
             @Override
@@ -95,12 +96,9 @@ implements View.OnClickListener, PostAdapter.PostClickListener {
                 if (dy > 0) {
                     binding.fab.hide();
                     binding.search.hide();
-                    binding.reply.hide();
                 } else {
                     binding.fab.show();
                     binding.search.show();
-                    binding.reply.show();
-
                 }
                 super.onScrolled(recyclerView, dx, dy);
             }
@@ -114,6 +112,20 @@ implements View.OnClickListener, PostAdapter.PostClickListener {
                 }
             }
         });
+    }
+
+    private void setUpPageAdapter(){
+        pageAdapter = new PageAdapter(this);
+        pageAdapter.setSize(viewModel.responseList.getTotalPages());
+
+        DividerItemDecoration divider = new DividerItemDecoration(requireActivity(), DividerItemDecoration.HORIZONTAL);
+        divider.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(requireActivity(), R.drawable.horizontal_divider)));
+        binding.paginationBar.addItemDecoration(divider);
+
+        binding.paginationBar.setLayoutManager(new LinearLayoutManager(requireContext(),RecyclerView.HORIZONTAL,false));
+
+        binding.paginationBar.setAdapter(pageAdapter);
+
     }
 
     private void loadMorePost(Integer page) {
@@ -159,9 +171,6 @@ implements View.OnClickListener, PostAdapter.PostClickListener {
             Timber.d("search btn click");
         } else if (v.getId() == R.id.reply_btn){
             Timber.d("reply btn click");
-        } else if (v.getId() == R.id.reply){
-            binding.replyBar.getRoot().setVisibility(
-                    binding.replyBar.getRoot().getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
         }
     }
     private void navigateToCreatePost(){
@@ -174,5 +183,10 @@ implements View.OnClickListener, PostAdapter.PostClickListener {
         Intent it = new Intent(requireActivity(), PostDetailActivity.class);
         it.putExtra(POST_ITEM, ApiModelUtils.toJson(item));
         startActivity(it);
+    }
+
+    @Override
+    public void pageClick(int index) {
+        Timber.d("page index %d",index);
     }
 }

@@ -19,10 +19,11 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
+            android:background="@android:color/transparent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingVertical="@dimen/_8sdp">
+            >
 
             <include
                 app:search="@{vm.reply}"
@@ -41,36 +42,26 @@
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@id/pagination_bar"
                 android:layout_below="@id/search_bar"
                 tools:listitem="@layout/layout_post" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/pagination_bar"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/reply_bar"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
                 android:layout_marginHorizontal="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:background="@android:color/transparent"
                 tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/layout_paging_button"
                 tools:orientation="horizontal" />
 
-            <include
-                app:reply="@{vm.reply}"
-                app:listener="@{f}"
-                android:visibility="gone"
-                android:id="@+id/reply_bar"
-                layout="@layout/layout_reply_bar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginHorizontal="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_4sdp" />
-
         </RelativeLayout>
 
         <LinearLayout
+            android:background="@android:color/transparent"
             android:layout_marginBottom="@dimen/_42sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,16 +77,6 @@
                 android:backgroundTint="@color/main_color"
                 android:onClick="@{(v)->f.onClick(v)}"
                 android:src="@drawable/search_icon"
-                app:tint="@color/white" />
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/reply"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_3sdp"
-                android:layout_marginVertical="@dimen/_3sdp"
-                android:backgroundTint="@color/main_color"
-                android:onClick="@{(v)->f.onClick(v)}"
-                android:src="@drawable/chat_icon"
                 app:tint="@color/white" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton

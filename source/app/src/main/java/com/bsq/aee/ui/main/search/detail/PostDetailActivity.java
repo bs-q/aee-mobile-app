@@ -3,6 +3,7 @@ package com.bsq.aee.ui.main.search.detail;
 import static com.bsq.aee.ui.main.search.SearchFragment.POST_ITEM;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +22,8 @@ import com.bsq.aee.ui.main.search.detail.adapter.PostDetailAdapter;
 
 import timber.log.Timber;
 
-public class PostDetailActivity extends BaseActivity<ActivityPostDetailBinding,PostDetailViewModel> {
+public class PostDetailActivity extends BaseActivity<ActivityPostDetailBinding,PostDetailViewModel>
+implements View.OnClickListener {
     @Override
     public int getLayoutId() {
         return R.layout.activity_post_detail;
@@ -77,15 +79,13 @@ public class PostDetailActivity extends BaseActivity<ActivityPostDetailBinding,P
 
         viewBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         viewBinding.recyclerView.setAdapter(adapter);
-        viewBinding.recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                if (!recyclerView.canScrollHorizontally(1) && viewModel.replies.hasNext()) { //1 for down
-                    Timber.d("Load more videos");
-                    getReplies(10,viewModel.replies.getNext());
-                }
-            }
-        });
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.reply){
+            viewBinding.replyBar.getRoot().setVisibility(
+                    viewBinding.replyBar.getRoot().getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+        }
     }
 }
