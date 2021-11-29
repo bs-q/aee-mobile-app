@@ -8,7 +8,7 @@
             type="androidx.databinding.ObservableField&lt;String>" />
         <variable
             name="listener"
-            type="com.bsq.aee.ui.main.search.SearchFragment" />
+            type="android.view.View.OnClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

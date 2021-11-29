@@ -1,25 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="f"
             type="com.bsq.aee.ui.main.university.UniversityFragment" />
+
         <variable
             name="vm"
             type="com.bsq.aee.ui.main.university.UniversityViewModel" />
     </data>
-    <LinearLayout
-        android:orientation="vertical"
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.recyclerview.widget.RecyclerView
-            tools:listitem="@layout/university_item"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-        </androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/search_bar"
+                layout="@layout/layout_search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8ssp"
+                android:visibility="gone"
+                app:listener="@{f}"
+                app:search="@{vm.search}" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/search_bar"
+                android:layout_marginTop="@dimen/_4sdp"
+                tools:listitem="@layout/university_item" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pagination_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:background="@android:color/transparent"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_paging_button"
+                tools:orientation="horizontal" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="@dimen/_32sdp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_4sdp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:backgroundTint="@color/main_color"
+                android:onClick="@{(v)->f.onClick(v)}"
+                android:src="@drawable/search_icon"
+                app:fabCustomSize="@dimen/_34sdp"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+    </FrameLayout>
+
 
 </layout>

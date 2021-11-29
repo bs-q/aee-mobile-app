@@ -21,6 +21,7 @@ public class PageAdapter extends RecyclerView.Adapter<PageAdapter.PageAdapterVie
    @Getter
    @Setter
    private int size;
+   private ObservableBoolean current;
 
     private PagingButtonClickListener listener;
 
@@ -42,12 +43,22 @@ public class PageAdapter extends RecyclerView.Adapter<PageAdapter.PageAdapterVie
 
     @Override
     public void onBindViewHolder(@NonNull PageAdapterViewHolder holder, int position) {
-        if (position == 0 ){
+        if (position == index ){
             holder.layoutPagingButtonBinding.setSelected(new ObservableBoolean(true));
+            current = holder.layoutPagingButtonBinding.getSelected();
+        } else {
+            holder.layoutPagingButtonBinding.setSelected(new ObservableBoolean(false));
         }
         holder.layoutPagingButtonBinding.setIndex(position);
         holder.layoutPagingButtonBinding.root.setOnClickListener(
-                v ->  listener.pageClick(index)
+                v -> {
+                    current.set(false);
+                    current = holder.layoutPagingButtonBinding.getSelected();
+                    current.set(true);
+                    index = holder.layoutPagingButtonBinding.getIndex();
+                    holder.layoutPagingButtonBinding.executePendingBindings();
+                    listener.pageClick(index);
+                }
         );
         holder.layoutPagingButtonBinding.executePendingBindings();
     }

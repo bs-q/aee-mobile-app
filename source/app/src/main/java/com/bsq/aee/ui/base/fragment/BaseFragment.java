@@ -26,7 +26,13 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 
-public abstract class BaseFragment <B extends ViewDataBinding,V extends BaseFragmentViewModel> extends Fragment {
+public abstract class BaseFragment <B extends ViewDataBinding,V extends BaseFragmentViewModel> extends Fragment
+implements View.OnClickListener {
+
+    @Override
+    public void onClick(View v) {
+
+    }
 
     protected B binding;
     @Inject

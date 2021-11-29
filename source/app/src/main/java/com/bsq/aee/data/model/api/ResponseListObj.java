@@ -31,4 +31,11 @@ public class ResponseListObj<T> {
         }
         this.data.addAll(data.data);
     }
+    public void replace(ResponseListObj<T> data) {
+        this.currentPage = data.currentPage;
+        this.totalPages = data.totalPages;
+        this.totalItems = data.totalItems;
+        this.data.clear();
+        this.data.addAll(data.data);
+    }
 }

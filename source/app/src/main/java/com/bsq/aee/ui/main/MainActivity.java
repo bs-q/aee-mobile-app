@@ -17,6 +17,7 @@ import com.bsq.aee.di.component.ActivityComponent;
 import com.bsq.aee.ui.base.activity.BaseActivity;
 import com.bsq.aee.ui.main.home.HomeFragment;
 import com.bsq.aee.ui.main.search.SearchFragment;
+import com.bsq.aee.ui.main.university.UniversityFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel> {
@@ -29,6 +30,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel
     private FragmentManager fm;
     private HomeFragment homeFragment;
     private Fragment active;
+    private UniversityFragment universityFragment;
     private SearchFragment searchFragment;
     @Override
     public int getLayoutId() {
@@ -68,6 +70,15 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel
                         fm.beginTransaction().hide(active).show(searchFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
                     }
                     active = searchFragment;
+                    return true;
+                case R.id.university:
+                    if (universityFragment == null){
+                        universityFragment = new UniversityFragment();
+                        fm.beginTransaction().add(R.id.nav_host_fragment, universityFragment, CHAT).hide(active).commitNow();
+                    } else {
+                        fm.beginTransaction().hide(active).show(universityFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
+                    }
+                    active = universityFragment;
                     return true;
                 default:
                     break;
