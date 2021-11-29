@@ -1,61 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="address"
             type="String" />
+
         <variable
             name="phone"
             type="String" />
+
         <variable
             name="email"
             type="String" />
+
         <variable
             name="rating"
             type="Integer" />
     </data>
 
     <LinearLayout
-        android:padding="@dimen/_3sdp"
-        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_3sdp">
+
         <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
             android:drawablePadding="@dimen/_4sdp"
             android:fontFamily="@font/montserratalternates_semibold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_12ssp"
+            android:gravity="center"
             android:text="@{address}"
+            android:textSize="@dimen/_8ssp"
+            android:textStyle="bold"
             app:drawableStartCompat="@drawable/location" />
+
         <TextView
-            android:layout_marginTop="@dimen/_3sdp"
-            android:drawablePadding="@dimen/_4sdp"
-            android:fontFamily="@font/montserratalternates_semibold"
+            style="@style/text_normal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_12ssp"
+
+            android:layout_marginTop="@dimen/_3sdp"
+            android:drawablePadding="@dimen/_4sdp"
+            android:gravity="center"
             android:text="@{email}"
+            android:textSize="@dimen/_8ssp"
+            android:textStyle="bold"
             app:drawableStartCompat="@drawable/chat" />
+
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_3sdp"
             android:drawablePadding="@dimen/_4sdp"
             android:fontFamily="@font/montserratalternates_semibold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_12ssp"
+            android:gravity="center"
             android:text="@{phone}"
+            android:textSize="@dimen/_8ssp"
+            android:textStyle="bold"
             app:drawableStartCompat="@drawable/call" />
-        <TextView
-            android:layout_marginTop="@dimen/_3sdp"
-            android:drawablePadding="@dimen/_4sdp"
-            android:fontFamily="@font/montserratalternates_semibold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_12ssp"
-            android:text="@{rating.toString()}"
-            app:drawableStartCompat="@drawable/star" />
+        <!--        <TextView-->
+        <!--            android:layout_marginTop="@dimen/_3sdp"-->
+        <!--            android:drawablePadding="@dimen/_4sdp"-->
+        <!--            android:fontFamily="@font/montserratalternates_semibold"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:textSize="@dimen/_8ssp"-->
+        <!--            android:text="@{rating.toString()}"-->
+        <!--            app:drawableStartCompat="@drawable/star" />-->
     </LinearLayout>
 </layout>

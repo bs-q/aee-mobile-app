@@ -19,6 +19,7 @@
         android:layout_height="match_parent">
 
         <ImageView
+            app:glide_image="@{vm.image}"
             android:id="@+id/university_img"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +38,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="@dimen/_8sdp"
             android:id="@+id/university_name"
+            android:text="@{vm.universityName}"
             android:layout_marginTop="@dimen/_6sdp"
             android:textSize="@dimen/_16ssp"
             android:layout_width="wrap_content"
@@ -85,7 +87,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
             <ScrollView
-                android:visibility="@{!vm.page?View.GONE:View.VISIBLE}"
+                android:visibility="@{vm.page?View.GONE:View.VISIBLE}"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <LinearLayout
@@ -108,7 +110,9 @@
                         layout="@layout/layout_university_contact"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <TextView
-                        android:text="@{vm.description}"
+                        style="@style/description"
+                        android:textSize="@dimen/_12ssp"
+                        app:html_text="@{vm.description}"
                         android:layout_margin="@dimen/_8sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -116,7 +120,7 @@
             </ScrollView>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rc"
-                android:visibility="@{vm.page?View.GONE:View.VISIBLE}"
+                android:visibility="@{!vm.page?View.GONE:View.VISIBLE}"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 

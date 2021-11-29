@@ -56,4 +56,12 @@
         <item name="fontFamily">@font/montserratalternates_semibold</item>
         <item name="android:fontFamily">@font/montserratalternates_semibold</item>
     </style>
+    <style name="text_normal">
+        <item name="fontFamily">@font/montserratalternates_regular</item>
+        <item name="android:fontFamily">@font/montserratalternates_regular</item>
+    </style>
+    <style name="description">
+        <item name="fontFamily">@font/opensans</item>
+        <item name="android:fontFamily">@font/opensans</item>
+    </style>
 </resources>

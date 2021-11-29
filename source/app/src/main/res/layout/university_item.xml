@@ -4,14 +4,13 @@
 
     <data>
         <variable
-            name="name"
-            type="String" />
-        <variable
-            name="shortDescription"
-            type="String" />
+            name="item"
+            type="com.bsq.aee.data.model.api.response.UniversityResponse" />
+
     </data>
 
     <RelativeLayout
+        android:id="@+id/root"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <com.google.android.material.card.MaterialCardView
@@ -27,12 +26,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
+                    app:glide_image="@{item.image}"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_90sdp"/>
                 <TextView
-                    android:text="@{name}"
+                    android:text="@{item.name}"
                     android:layout_marginHorizontal="@dimen/_8sdp"
                     android:id="@+id/university_name"
                     android:layout_marginTop="@dimen/_6sdp"
@@ -42,7 +41,7 @@
                     android:fontFamily="@font/montserratalternates_bold"
                     android:textColor="@color/black"/>
                 <TextView
-                    android:text="@{shortDescription}"
+                    app:html_text="@{item.description}"
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:layout_marginHorizontal="@dimen/_8sdp"
                     android:id="@+id/university_short_description"

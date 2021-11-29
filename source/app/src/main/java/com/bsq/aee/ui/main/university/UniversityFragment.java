@@ -1,5 +1,6 @@
 package com.bsq.aee.ui.main.university;
 
+import android.content.Intent;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bsq.aee.R;
+import com.bsq.aee.data.model.api.ApiModelUtils;
 import com.bsq.aee.data.model.api.response.UniversityResponse;
 import com.bsq.aee.databinding.FragmentUniversityBinding;
 import com.bsq.aee.di.component.FragmentComponent;
@@ -19,6 +21,7 @@ import com.bsq.aee.ui.main.search.adapter.PageAdapter;
 import com.bsq.aee.ui.main.search.adapter.PostAdapter;
 import com.bsq.aee.ui.main.search.detail.adapter.PostDetailAdapter;
 import com.bsq.aee.ui.main.university.adapter.UniversityAdapter;
+import com.bsq.aee.ui.main.university.details.UniversityDetailsActivity;
 
 import java.util.Objects;
 
@@ -114,8 +117,13 @@ public class UniversityFragment extends BaseFragment<FragmentUniversityBinding,U
         });
     }
 
+    public static final String UNIVERSITY_ITEM = "UNIVERSITY_ITEM";
+
     @Override
-    public void UniversityItemClick(UniversityResponse item) {
+    public void universityItemClick(UniversityResponse item) {
+        Intent it = new Intent(requireActivity(), UniversityDetailsActivity.class);
+        it.putExtra(UNIVERSITY_ITEM, ApiModelUtils.toJson(item));
+        startActivity(it);
     }
 
     @Override

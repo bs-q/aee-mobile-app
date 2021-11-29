@@ -6,6 +6,7 @@ import androidx.databinding.ObservableInt;
 
 import com.bsq.aee.MVVMApplication;
 import com.bsq.aee.data.Repository;
+import com.bsq.aee.data.model.api.response.UniversityResponse;
 import com.bsq.aee.ui.base.activity.BaseViewModel;
 
 public class UniversityDetailsViewModel extends BaseViewModel {
@@ -14,8 +15,9 @@ public class UniversityDetailsViewModel extends BaseViewModel {
     public ObservableField<String> phone = new ObservableField<>("");
     public ObservableField<String> address = new ObservableField<>("");
     public ObservableField<String> description = new ObservableField<>("");
+    public ObservableField<String> image = new ObservableField<>("");
+    public ObservableField<String> universityName = new ObservableField<>("");
     public ObservableInt rating = new ObservableInt();
-
     // false: show description, true: show fields
     public ObservableBoolean page = new ObservableBoolean(false);
 

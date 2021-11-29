@@ -24,7 +24,7 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Un
     private UniversityAdapter.UniversityItemClickListener listener;
 
     public interface UniversityItemClickListener{
-        void UniversityItemClick(UniversityResponse item);
+        void universityItemClick(UniversityResponse item);
     }
 
     public UniversityAdapter(UniversityAdapter.UniversityItemClickListener listener){
@@ -41,8 +41,10 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Un
 
     @Override
     public void onBindViewHolder(@NonNull UniversityAdapter.UniversityAdapterViewHolder holder, int position) {
-        holder.UniversityItemBinding.setName(items.get(position).getName());
-        holder.UniversityItemBinding.setShortDescription(items.get(position).getDescription());
+        holder.UniversityItemBinding.setItem(items.get(position));
+        holder.UniversityItemBinding.root.setOnClickListener(v -> listener.universityItemClick(
+                holder.UniversityItemBinding.getItem()
+        ));
         holder.UniversityItemBinding.executePendingBindings();
     }
 
