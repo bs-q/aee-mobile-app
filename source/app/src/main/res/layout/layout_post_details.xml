@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="expanse"
+            name="expand"
             type="androidx.databinding.ObservableBoolean" />
         <variable
             name="item"
@@ -91,7 +91,7 @@
                     android:layout_marginTop="@dimen/_8sdp"
                     android:ellipsize="end"
                     style="@style/post_title"
-                    android:maxLines="2"
+                    android:maxLines="@{!expand?2:Integer.MAX_VALUE}"
                     android:paddingHorizontal="@dimen/_2sdp"
                     android:text="@{item.title}"
                     android:textColor="#373636"
@@ -106,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     style="@style/post_content"
-                    android:maxLines="3"
+                    android:maxLines="@{!expand?3:Integer.MAX_VALUE}"
                     android:paddingHorizontal="@dimen/_2sdp"
                     android:text="@{item.content}"
                     android:textColor="#A8A8A8"
@@ -118,10 +118,10 @@
                 <ImageView
                     android:layout_marginTop="@dimen/_4sdp"
                     android:id="@+id/load_more"
-                    android:background="@drawable/load_more_up"
-                    android:src="@drawable/down_icon"
+                    android:src="@{!expand?@drawable/down_icon:@drawable/up_icon}"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/_6sdp"
+                    android:scaleType="center"
+                    android:layout_height="@dimen/_14sdp"
                     app:layout_constraintTop_toBottomOf="@id/content"
                     app:layout_constraintStart_toStartOf="@id/content"
                     app:layout_constraintEnd_toEndOf="@id/content"/>

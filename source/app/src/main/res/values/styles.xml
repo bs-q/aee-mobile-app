@@ -64,4 +64,8 @@
         <item name="fontFamily">@font/opensans</item>
         <item name="android:fontFamily">@font/opensans</item>
     </style>
+    <style name="title_bold">
+        <item name="fontFamily">@font/montserratalternates_bold</item>
+        <item name="android:fontFamily">@font/montserratalternates_bold</item>
+    </style>
 </resources>

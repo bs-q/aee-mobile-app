@@ -138,5 +138,7 @@ public class UniversityFragment extends BaseFragment<FragmentUniversityBinding,U
     public void pageClick(int index) {
         getUniversities(5,index);
     }
+
+
 }
 

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="a"
+            type="com.bsq.aee.ui.main.university.field.FieldDetailActivity" />
+
+        <variable
+            name="vm"
+            type="com.bsq.aee.ui.main.university.field.FieldDetailViewModel" />
+        <variable
+            name="item"
+            type="com.bsq.aee.data.model.api.response.FieldResponse" />
+    </data>
+    <FrameLayout
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:padding="@dimen/_6sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Thông tin ngành học"
+                    android:layout_gravity="center"
+                    style="@style/title_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_18ssp"
+                    android:textColor="@color/black"/>
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_32sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/name_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tên ngành"
+                        android:textColor="@color/dark_gray_text"
+                        android:textSize="@dimen/_9ssp" />
+
+                    <TextView
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:id="@+id/name"
+                        style="@style/semibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.name}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="Trường"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/university_title"
+                        android:textSize="@dimen/_9ssp"
+                        android:textColor="@color/gray_text"/>
+                    <TextView
+                        android:text="@{item.universityName}"
+                        style="@style/semibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/university"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:id="@+id/block_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="Hệ đào tạo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/type_title"
+                        android:textSize="@dimen/_9ssp"
+                        android:textColor="@color/gray_text"/>
+                    <TextView
+                        android:text="@{item.type}"
+                        style="@style/semibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/type"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/year_block"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/score_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Điểm đầu vào"
+                            android:textColor="@color/gray_text"
+                            android:textSize="@dimen/_9ssp" />
+
+                        <TextView
+                            android:id="@+id/score"
+                            style="@style/semibold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@{item.score.toString()}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/year_block"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:text="Năm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/year_title"
+                            android:textSize="@dimen/_9ssp"
+                            android:textColor="@color/dark_gray_text"/>
+                        <TextView
+                            android:text="@{item.year.toString()}"
+                            style="@style/semibold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/year"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/price_block"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/credit_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Số tín chỉ"
+                            android:textColor="@color/dark_gray_text"
+                            android:textSize="@dimen/_9ssp" />
+
+                        <TextView
+                            android:id="@+id/credit"
+                            style="@style/semibold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@{item.credits.toString()}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/price_block"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:text="Học phí/tín chí"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/price_title"
+                            android:textSize="@dimen/_9ssp"
+                            android:textColor="@color/dark_gray_text"/>
+                        <TextView
+                            android:text="@{@string/format_price(item.price)}"
+                            style="@style/semibold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/price"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="Chi phí dự kiến"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_9ssp"
+                        android:textColor="@color/dark_gray_text"/>
+                    <TextView
+                        android:text="@{@string/format_price(item.total)}"
+                        style="@style/semibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/total"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/favorite_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabCustomSize="@dimen/_34sdp"
+            app:borderWidth="0dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:backgroundTint="#EA3358"
+            android:onClick="@{(v)->a.onClick(v)}"
+            android:src="@drawable/favorite"
+            app:tint="@color/white" />
+    </FrameLayout>
+
+</layout>

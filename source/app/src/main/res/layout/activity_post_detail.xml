@@ -42,6 +42,7 @@
             android:backgroundTint="@color/main_color"
             android:onClick="@{(v)->a.onClick(v)}"
             android:src="@drawable/chat_icon"
+            app:borderWidth="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:tint="@color/white" />

@@ -8,17 +8,21 @@ import com.bsq.aee.data.model.api.request.CreatePostRequest;
 import com.bsq.aee.data.model.api.request.LoginRequest;
 import com.bsq.aee.data.model.api.request.LoginWithGoogleRequest;
 import com.bsq.aee.data.model.api.request.ReplyRequest;
+import com.bsq.aee.data.model.api.response.FieldResponse;
 import com.bsq.aee.data.model.api.response.LoginResponse;
 import com.bsq.aee.data.model.api.response.PostResponse;
 import com.bsq.aee.data.model.api.response.ProfileResponse;
 import com.bsq.aee.data.model.api.response.ReplyResponse;
 import com.bsq.aee.data.model.api.response.UniversityResponse;
 
+import java.util.List;
+
 import io.reactivex.rxjava3.core.Observable;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiService {
@@ -46,6 +50,8 @@ public interface ApiService {
     @GET("u/list-university")
     Observable<ResponseListObj<UniversityResponse>> getUniversities(@Query("size") Integer size,
                                                                     @Query("page") Integer page);
+    @GET("u/list-field/{id}")
+    Observable<ResponseWrapper<List<FieldResponse>>> getField(@Path("id") long id);
 
     @POST("u/discussion/reply-post")
     Observable<ResponseWrapper<String>> reply(@Body ReplyRequest request);

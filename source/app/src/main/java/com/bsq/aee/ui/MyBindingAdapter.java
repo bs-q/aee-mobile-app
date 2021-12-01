@@ -10,6 +10,7 @@ import androidx.databinding.BindingAdapter;
 
 import com.bsq.aee.R;
 import com.bumptech.glide.Glide;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.imageview.ShapeableImageView;
 
 public class MyBindingAdapter {
@@ -45,4 +46,5 @@ public class MyBindingAdapter {
         }
         view.setText(HtmlCompat.fromHtml(html,HtmlCompat.FROM_HTML_MODE_COMPACT));
     }
+
 }

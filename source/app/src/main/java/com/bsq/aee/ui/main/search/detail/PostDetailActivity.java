@@ -114,7 +114,7 @@ public class PostDetailActivity extends BaseActivity<ActivityPostDetailBinding,P
         } else if (v.getId() == R.id.reply_btn){
             Timber.d("Reply");
             doReply();
-        }
+        } 
     }
     private void doReply(){
         if (Objects.requireNonNull(viewModel.reply.get()).isEmpty()) return;

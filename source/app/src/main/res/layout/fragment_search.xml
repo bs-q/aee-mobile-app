@@ -38,11 +38,11 @@
                 android:visibility="gone" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginTop="@dimen/_4sdp"
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/search_bar"
+                android:layout_marginTop="@dimen/_4sdp"
                 tools:listitem="@layout/layout_post" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_2sdp"
                 android:layout_marginBottom="@dimen/_4sdp"
                 android:background="@android:color/transparent"
                 tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -60,39 +60,34 @@
 
         </RelativeLayout>
 
-        <LinearLayout
-            android:background="@android:color/transparent"
-            android:layout_marginBottom="@dimen/_42sdp"
-            android:paddingVertical="@dimen/_4sdp"
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:orientation="vertical">
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_23sdp"
+            android:backgroundTint="@color/main_color"
+            android:onClick="@{(v)->f.onClick(v)}"
+            android:src="@drawable/search_icon"
+            app:borderWidth="0dp"
+            app:fabCustomSize="@dimen/_34sdp"
+            app:tint="@color/white" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_3sdp"
-                app:fabCustomSize="@dimen/_34sdp"
-                android:layout_marginVertical="@dimen/_3sdp"
-                android:backgroundTint="@color/main_color"
-                android:onClick="@{(v)->f.onClick(v)}"
-                android:src="@drawable/search_icon"
-                app:tint="@color/white" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabCustomSize="@dimen/_34sdp"
-                android:layout_marginHorizontal="@dimen/_3sdp"
-                android:layout_marginVertical="@dimen/_3sdp"
-                android:backgroundTint="@color/main_color"
-                android:onClick="@{(v)->f.onClick(v)}"
-                android:src="@drawable/add_icon"
-                app:tint="@color/white" />
-        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            app:borderWidth="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabCustomSize="@dimen/_34sdp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_68sdp"
+            android:backgroundTint="@color/main_color"
+            android:onClick="@{(v)->f.onClick(v)}"
+            android:src="@drawable/add_icon"
+            app:tint="@color/white" />
 
     </FrameLayout>
 </layout>

@@ -8,6 +8,7 @@ import com.bsq.aee.ui.main.MainActivity;
 import com.bsq.aee.ui.main.search.create.CreatePostActivity;
 import com.bsq.aee.ui.main.search.detail.PostDetailActivity;
 import com.bsq.aee.ui.main.university.details.UniversityDetailsActivity;
+import com.bsq.aee.ui.main.university.field.FieldDetailActivity;
 
 import dagger.Component;
 
@@ -26,5 +27,7 @@ public interface ActivityComponent {
     void inject(CreatePostActivity activity);
 
     void inject(PostDetailActivity activity);
+
+    void inject(FieldDetailActivity activity);
 }
 

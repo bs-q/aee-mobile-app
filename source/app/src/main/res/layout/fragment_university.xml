@@ -59,27 +59,20 @@
 
         </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_marginBottom="@dimen/_32sdp"
-            android:background="@android:color/transparent"
-            android:orientation="vertical"
-            android:paddingVertical="@dimen/_4sdp">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_3sdp"
-                android:layout_marginVertical="@dimen/_3sdp"
-                android:backgroundTint="@color/main_color"
-                android:onClick="@{(v)->f.onClick(v)}"
-                android:src="@drawable/search_icon"
-                app:fabCustomSize="@dimen/_34sdp"
-                app:tint="@color/white" />
-        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_17sdp"
+            android:backgroundTint="@color/main_color"
+            android:onClick="@{(v)->f.onClick(v)}"
+            app:borderWidth="0dp"
+            android:src="@drawable/search_icon"
+            app:fabCustomSize="@dimen/_34sdp"
+            app:tint="@color/white" />
 
     </FrameLayout>
 

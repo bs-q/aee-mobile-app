@@ -16,6 +16,7 @@ import com.bsq.aee.ui.main.MainViewModel;
 import com.bsq.aee.ui.main.search.create.CreatePostViewModel;
 import com.bsq.aee.ui.main.search.detail.PostDetailViewModel;
 import com.bsq.aee.ui.main.university.details.UniversityDetailsViewModel;
+import com.bsq.aee.ui.main.university.field.FieldDetailViewModel;
 import com.bsq.aee.utils.GetInfo;
 
 import javax.inject.Named;
@@ -92,5 +93,13 @@ public class ActivityModule {
         Supplier<PostDetailViewModel> supplier = () -> new PostDetailViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<PostDetailViewModel> factory = new ViewModelProviderFactory<>(PostDetailViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(PostDetailViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    FieldDetailViewModel provideFieldDetailViewModel(Repository repository, Context application) {
+        Supplier<FieldDetailViewModel> supplier = () -> new FieldDetailViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<FieldDetailViewModel> factory = new ViewModelProviderFactory<>(FieldDetailViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(FieldDetailViewModel.class);
     }
 }

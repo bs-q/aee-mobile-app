@@ -36,9 +36,9 @@
                 android:src="@drawable/chat_icon" />
 
             <EditText
-                android:layout_alignParentEnd="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_4sdp"
                 android:layout_toEndOf="@id/search_icon"
@@ -46,7 +46,6 @@
                 android:fontFamily="@font/opensans"
                 android:hint="Bình luận"
                 android:inputType="textAutoComplete"
-                android:maxLines="1"
                 android:text="@={reply}"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
