@@ -101,7 +101,7 @@ public class HomeFragment extends BaseFragment<FragmentHomeBinding,HomeViewModel
         });
 
         DividerItemDecoration vertical = new DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL);
-        vertical.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(requireContext(), R.drawable.vertical_divider)));
+        vertical.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(requireContext(), R.drawable.vertical_divider_small)));
         binding.recyclerView.addItemDecoration(vertical);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.recyclerView.setAdapter(adapter);
