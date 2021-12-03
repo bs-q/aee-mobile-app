@@ -246,6 +246,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
             @Override
             public void doSuccess() {
                 viewModel.showSuccessMessage("Login success");
+                viewModel.hideLoading();
                 navigateToMainActivity();
             }
 

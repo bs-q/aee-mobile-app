@@ -22,6 +22,7 @@ import com.bsq.aee.ui.main.search.adapter.PostAdapter;
 import com.bsq.aee.ui.main.search.detail.adapter.PostDetailAdapter;
 import com.bsq.aee.ui.main.university.adapter.UniversityAdapter;
 import com.bsq.aee.ui.main.university.details.UniversityDetailsActivity;
+import com.bsq.aee.utils.DeviceUtils;
 
 import java.util.Objects;
 
@@ -131,6 +132,30 @@ public class UniversityFragment extends BaseFragment<FragmentUniversityBinding,U
         if (v.getId() == R.id.search){
             binding.searchBar.getRoot().setVisibility(
                     binding.searchBar.getRoot().getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+        } else if (v.getId() == R.id.search_btn){
+            if (binding.searchBar.getSearch().get().isEmpty()) return;
+            DeviceUtils.hideSoftKeyboard(requireActivity());
+            viewModel.showLoading();
+            viewModel.search(binding.searchBar.getSearch().get(), new BaseCallback() {
+                @Override
+                public void doError(Throwable error) {
+                    viewModel.hideLoading();
+                    Timber.d(error);
+                    viewModel.showErrorMessage(getString(R.string.api_error));
+                }
+
+                @Override
+                public void doSuccess() {
+                    viewModel.hideLoading();
+                    adapter.notifyDataSetChanged();
+                }
+
+                @Override
+                public void doFail() {
+                    viewModel.hideLoading();
+                    viewModel.showErrorMessage(getString(R.string.api_error));
+                }
+            });
         }
     }
 

@@ -10,10 +10,11 @@
             type="com.bsq.aee.ui.main.favorite.FavoriteViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@color/purple_200"
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingVertical="@dimen/_8sdp"
+        android:id="@+id/rc"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.recyclerview.widget.RecyclerView>
 </layout>

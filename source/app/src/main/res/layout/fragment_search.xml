@@ -27,6 +27,7 @@
             <include
                 app:search="@{vm.reply}"
                 app:listener="@{f}"
+                app:hint="@{`Tìm kiếm bài viết`}"
                 android:id="@+id/search_bar"
                 layout="@layout/layout_search_bar"
                 android:layout_width="match_parent"

@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class FieldResponse {
+    private Long id;
     // hệ đào tạo
     private String type;
 
@@ -27,6 +28,8 @@ public class FieldResponse {
     private Integer credits;
 
     private String universityName;
+
+    private String universityImg;
 
     public Double total(){
         return price * credits;

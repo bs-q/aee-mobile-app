@@ -12,6 +12,7 @@
     </data>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:padding="@dimen/_8sdp"
         tools:listitem="@layout/layout_home_item"
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"

@@ -24,6 +24,7 @@ import com.bsq.aee.ui.main.search.adapter.PageAdapter;
 import com.bsq.aee.ui.main.search.adapter.PostAdapter;
 import com.bsq.aee.ui.main.search.create.CreatePostActivity;
 import com.bsq.aee.ui.main.search.detail.PostDetailActivity;
+import com.bsq.aee.utils.DeviceUtils;
 
 import java.util.Objects;
 
@@ -168,7 +169,29 @@ public class SearchFragment extends BaseFragment<FragmentSearchBinding,SearchVie
                     binding.searchBar.getRoot().getVisibility() == View.GONE ? View.VISIBLE : View.GONE
             );
         } else if (v.getId() == R.id.search_btn){
-            Timber.d("search btn click");
+            if (binding.searchBar.getSearch().get().isEmpty()) return;
+            DeviceUtils.hideSoftKeyboard(requireActivity());
+            viewModel.showLoading();
+            viewModel.search(binding.searchBar.getSearch().get(), new BaseCallback() {
+                @Override
+                public void doError(Throwable error) {
+                    viewModel.hideLoading();
+                    Timber.d(error);
+                    viewModel.showErrorMessage(getString(R.string.api_error));
+                }
+
+                @Override
+                public void doSuccess() {
+                    viewModel.hideLoading();
+                    adapter.notifyDataSetChanged();
+                }
+
+                @Override
+                public void doFail() {
+                    viewModel.hideLoading();
+                    viewModel.showErrorMessage(getString(R.string.api_error));
+                }
+            });
         } else if (v.getId() == R.id.reply_btn){
             Timber.d("reply btn click");
         }
@@ -188,5 +211,34 @@ public class SearchFragment extends BaseFragment<FragmentSearchBinding,SearchVie
     @Override
     public void pageClick(int index) {
         Timber.d("page index %d",index);
+        getPost(5,index);
+
+    }
+    private void getPost(int size, int page){
+        viewModel.showLoading();
+        viewModel.getPost(page, size, new BaseCallback() {
+            @Override
+            public void doError(Throwable error) {
+                Timber.d(error);
+            }
+
+            @Override
+            public void doSuccess() {
+                viewModel.hideLoading();
+                if (pageAdapter.getSize() != viewModel.responseList.getTotalPages()){
+                    updatePageAdapter();
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void doFail() {
+                Timber.d("Error it get replies");
+            }
+        });
+    }
+    private void updatePageAdapter(){
+        pageAdapter.setSize(viewModel.responseList.getTotalPages());
+        pageAdapter.notifyDataSetChanged();
     }
 }

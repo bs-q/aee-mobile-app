@@ -34,6 +34,7 @@
                 android:layout_marginBottom="@dimen/_8ssp"
                 android:visibility="gone"
                 app:listener="@{f}"
+                app:hint="@{`Tìm kiếm trường`}"
                 app:search="@{vm.search}" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -50,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_2sdp"
                 android:layout_marginBottom="@dimen/_4sdp"
                 android:background="@android:color/transparent"
                 tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

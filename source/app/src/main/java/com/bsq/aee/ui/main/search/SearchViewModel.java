@@ -44,4 +44,18 @@ public class SearchViewModel extends BaseFragmentViewModel {
                         }, callback::doError)
         );
     }
+    public void search(String name, BaseCallback callback){
+        compositeDisposable.add(
+                repository.getApiService().searchPost(name)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(
+                                response -> {
+                                    responseList.getData().clear();
+                                    responseList.getData().addAll(response.getData());
+                                    callback.doSuccess();
+                                },callback::doError
+                        )
+        );
+    }
 }

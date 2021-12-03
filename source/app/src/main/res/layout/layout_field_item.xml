@@ -20,6 +20,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -35,12 +36,12 @@
                     android:textSize="@dimen/_8ssp" />
 
                 <TextView
-                    android:maxLines="1"
-                    android:ellipsize="end"
                     android:id="@+id/name"
                     style="@style/semibold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
                     android:text="@{item.name}"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_12ssp" />
@@ -48,7 +49,7 @@
             <LinearLayout
                 android:id="@+id/block_2"
                 android:layout_alignParentEnd="true"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/_80sdp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
@@ -60,6 +61,8 @@
                     android:textColor="@color/gray_text"/>
                 <TextView
                     android:text="@{item.type}"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     style="@style/semibold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

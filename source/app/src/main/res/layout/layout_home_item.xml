@@ -8,8 +8,11 @@
             type="com.bsq.aee.data.model.api.response.news.NewsResponse" />
     </data>
 
+
     <com.google.android.material.card.MaterialCardView
         app:cardCornerRadius="@dimen/_7sdp"
+        app:strokeColor="@color/gray_text"
+        app:strokeWidth="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,6 +26,7 @@
                 app:shapeAppearanceOverlay="@style/news_shape"
                 app:srcCompat="@drawable/ic_launcher_background"
                 android:layout_height="@dimen/_90sdp"
+                glide_image="@{item.thumbnail}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +35,11 @@
                 android:layout_marginStart="@dimen/_6sdp"
                 android:layout_marginEnd="@dimen/_6sdp"
                 android:textColor="#5F5F5F"
+                android:text="@{item.titles}"
                 android:textSize="@dimen/_14ssp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                style="@style/title_bold"
                 app:layout_constraintStart_toEndOf="@id/thumbnail"
                 app:layout_constraintTop_toTopOf="@id/thumbnail"
                 app:layout_constraintBottom_toBottomOf="@id/thumbnail"

@@ -1,5 +1,6 @@
 package com.bsq.aee.ui.main;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -15,6 +16,7 @@ import com.bsq.aee.R;
 import com.bsq.aee.databinding.ActivityMainBinding;
 import com.bsq.aee.di.component.ActivityComponent;
 import com.bsq.aee.ui.base.activity.BaseActivity;
+import com.bsq.aee.ui.main.favorite.FavoriteFragment;
 import com.bsq.aee.ui.main.home.HomeFragment;
 import com.bsq.aee.ui.main.search.SearchFragment;
 import com.bsq.aee.ui.main.university.UniversityFragment;
@@ -32,6 +34,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel
     private Fragment active;
     private UniversityFragment universityFragment;
     private SearchFragment searchFragment;
+    private FavoriteFragment favoriteFragment;
     @Override
     public int getLayoutId() {
         return R.layout.activity_main;
@@ -47,6 +50,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel
         buildComponent.inject(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +83,15 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel
                         fm.beginTransaction().hide(active).show(universityFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
                     }
                     active = universityFragment;
+                    return true;
+                case R.id.favorite:
+                    if (favoriteFragment == null){
+                        favoriteFragment = new FavoriteFragment();
+                        fm.beginTransaction().add(R.id.nav_host_fragment, favoriteFragment, FAVORITE).hide(active).commitNow();
+                    } else {
+                        fm.beginTransaction().hide(active).show(favoriteFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
+                    }
+                    active = favoriteFragment;
                     return true;
                 default:
                     break;

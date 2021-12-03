@@ -14,6 +14,7 @@ import com.bsq.aee.data.model.api.response.PostResponse;
 import com.bsq.aee.data.model.api.response.ProfileResponse;
 import com.bsq.aee.data.model.api.response.ReplyResponse;
 import com.bsq.aee.data.model.api.response.UniversityResponse;
+import com.bsq.aee.data.model.api.response.news.NewsResponse;
 
 import java.util.List;
 
@@ -52,6 +53,21 @@ public interface ApiService {
                                                                     @Query("page") Integer page);
     @GET("u/list-field/{id}")
     Observable<ResponseWrapper<List<FieldResponse>>> getField(@Path("id") long id);
+
+    @GET("u/list-news")
+    Observable<ResponseWrapper<List<NewsResponse>>> getNews();
+
+    @GET("u/get-favorite")
+    Observable<ResponseListObj<FieldResponse>> getFavorite();
+
+    @POST("u/add-favorite/{id}")
+    Observable<ResponseWrapper<String>> addFavorite(@Path("id") long id);
+
+    @GET("u/search-university")
+    Observable<ResponseWrapper<List<UniversityResponse>>> searchUniversity(@Query("name") String name);
+
+    @GET("u/search-post")
+    Observable<ResponseWrapper<List<PostResponse>>> searchPost(@Query("title") String title);
 
     @POST("u/discussion/reply-post")
     Observable<ResponseWrapper<String>> reply(@Body ReplyRequest request);

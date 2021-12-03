@@ -9,6 +9,9 @@
         <variable
             name="listener"
             type="android.view.View.OnClickListener" />
+        <variable
+            name="hint"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,13 +40,13 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_4sdp"
                 android:layout_toEndOf="@id/search_icon"
                 android:background="@null"
                 android:fontFamily="@font/opensans"
-                android:hint="Tìm kiếm bài viết"
-                android:layout_alignParentEnd="true"
+                android:hint="@{hint}"
                 android:inputType="textAutoComplete"
                 android:maxLines="1"
                 android:text="@={search}"

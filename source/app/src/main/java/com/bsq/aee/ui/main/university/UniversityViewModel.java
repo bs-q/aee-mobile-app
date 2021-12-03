@@ -5,7 +5,6 @@ import androidx.databinding.ObservableField;
 import com.bsq.aee.MVVMApplication;
 import com.bsq.aee.data.Repository;
 import com.bsq.aee.data.model.api.ResponseListObj;
-import com.bsq.aee.data.model.api.response.PostResponse;
 import com.bsq.aee.data.model.api.response.UniversityResponse;
 import com.bsq.aee.ui.base.activity.BaseCallback;
 import com.bsq.aee.ui.base.fragment.BaseFragmentViewModel;
@@ -34,6 +33,20 @@ public class UniversityViewModel extends BaseFragmentViewModel {
                         .subscribe(
                                 response -> {
                                     universities.replace(response);
+                                    callback.doSuccess();
+                                },callback::doError
+                        )
+        );
+    }
+    public void search(String name, BaseCallback callback){
+        compositeDisposable.add(
+                repository.getApiService().searchUniversity(name)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(
+                                response -> {
+                                    universities.getData().clear();
+                                    universities.getData().addAll(response.getData());
                                     callback.doSuccess();
                                 },callback::doError
                         )

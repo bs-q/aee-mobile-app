@@ -18,4 +18,6 @@ public class NewsResponse extends BaseResponse {
     private String url;
 
     private String tag;
+
+    private String thumbnail;
 }
