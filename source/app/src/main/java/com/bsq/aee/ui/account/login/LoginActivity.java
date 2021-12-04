@@ -171,7 +171,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
             @Override
             public void doError(Throwable error) {
                 viewModel.hideLoading();
-                viewModel.showErrorMessage("Email đã được đăng kí");
+                viewModel.showErrorMessage(getString(R.string.api_error));
             }
 
             @Override
@@ -182,7 +182,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
             @Override
             public void doFail() {
                 viewModel.hideLoading();
-                viewModel.showErrorMessage(getString(R.string.api_error));
+                viewModel.showErrorMessage("Email đã được đăng kí");
             }
         });
     }
