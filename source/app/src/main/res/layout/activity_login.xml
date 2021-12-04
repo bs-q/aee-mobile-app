@@ -139,10 +139,9 @@
                             android:id="@+id/or"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
+                            android:layout_centerInParent="true"
                             android:fontFamily="@font/opensans"
-                            android:text="or"
+                            android:text="Hoặc"
                             android:textSize="@dimen/_14ssp" />
 
                         <View
@@ -156,6 +155,7 @@
                     </RelativeLayout>
 
                     <com.google.android.material.button.MaterialButton
+                        android:visibility="gone"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_48sdp"
