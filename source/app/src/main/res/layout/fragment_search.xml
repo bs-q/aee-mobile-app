@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginStart="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
                 android:layout_marginBottom="@dimen/_4sdp"
                 android:background="@android:color/transparent"
                 tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

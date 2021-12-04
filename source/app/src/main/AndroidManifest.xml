@@ -49,6 +49,9 @@
         <activity android:name=".ui.main.search.detail.PostDetailActivity" />
         <activity android:name=".ui.main.university.details.UniversityDetailsActivity" />
         <activity android:name=".ui.main.university.field.FieldDetailActivity" />
+        <activity android:name=".ui.web.WebActivity" />
+        <activity android:name=".ui.account.password.ChangePasswordActivity" />
+        <activity android:name=".ui.account.post.MyPostActivity" />
 
         <meta-data
             android:name="com.google.android.gms.version"

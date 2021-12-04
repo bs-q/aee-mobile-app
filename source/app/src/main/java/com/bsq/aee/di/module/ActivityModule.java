@@ -10,6 +10,8 @@ import com.bsq.aee.ViewModelProviderFactory;
 import com.bsq.aee.data.Repository;
 import com.bsq.aee.di.scope.ActivityScope;
 import com.bsq.aee.ui.account.login.LoginViewModel;
+import com.bsq.aee.ui.account.password.ChangePasswordViewModel;
+import com.bsq.aee.ui.account.post.MyPostViewModel;
 import com.bsq.aee.ui.account.register.RegisterViewModel;
 import com.bsq.aee.ui.base.activity.BaseActivity;
 import com.bsq.aee.ui.main.MainViewModel;
@@ -17,6 +19,7 @@ import com.bsq.aee.ui.main.search.create.CreatePostViewModel;
 import com.bsq.aee.ui.main.search.detail.PostDetailViewModel;
 import com.bsq.aee.ui.main.university.details.UniversityDetailsViewModel;
 import com.bsq.aee.ui.main.university.field.FieldDetailViewModel;
+import com.bsq.aee.ui.web.WebViewModel;
 import com.bsq.aee.utils.GetInfo;
 
 import javax.inject.Named;
@@ -101,5 +104,29 @@ public class ActivityModule {
         Supplier<FieldDetailViewModel> supplier = () -> new FieldDetailViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<FieldDetailViewModel> factory = new ViewModelProviderFactory<>(FieldDetailViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(FieldDetailViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    WebViewModel provideWebViewModel(Repository repository, Context application) {
+        Supplier<WebViewModel> supplier = () -> new WebViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<WebViewModel> factory = new ViewModelProviderFactory<>(WebViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(WebViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    ChangePasswordViewModel provideChangePasswordViewModel(Repository repository, Context application) {
+        Supplier<ChangePasswordViewModel> supplier = () -> new ChangePasswordViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<ChangePasswordViewModel> factory = new ViewModelProviderFactory<>(ChangePasswordViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(ChangePasswordViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    MyPostViewModel provideMyPostViewModel(Repository repository, Context application) {
+        Supplier<MyPostViewModel> supplier = () -> new MyPostViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<MyPostViewModel> factory = new ViewModelProviderFactory<>(MyPostViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(MyPostViewModel.class);
     }
 }

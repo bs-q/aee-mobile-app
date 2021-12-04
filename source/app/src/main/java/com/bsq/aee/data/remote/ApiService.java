@@ -2,6 +2,7 @@ package com.bsq.aee.data.remote;
 
 import com.bsq.aee.data.model.api.ResponseListObj;
 import com.bsq.aee.data.model.api.ResponseWrapper;
+import com.bsq.aee.data.model.api.request.ChangePasswordRequest;
 import com.bsq.aee.data.model.api.request.CheckAccountRequest;
 import com.bsq.aee.data.model.api.request.CreateAccountRequest;
 import com.bsq.aee.data.model.api.request.CreatePostRequest;
@@ -62,6 +63,12 @@ public interface ApiService {
 
     @POST("u/add-favorite/{id}")
     Observable<ResponseWrapper<String>> addFavorite(@Path("id") long id);
+
+    @GET("u/my-post")
+    Observable<ResponseWrapper<List<PostResponse>>> myPost();
+
+    @POST("u/change-password")
+    Observable<ResponseWrapper<String>> changePassword(@Body ChangePasswordRequest request);
 
     @GET("u/search-university")
     Observable<ResponseWrapper<List<UniversityResponse>>> searchUniversity(@Query("name") String name);

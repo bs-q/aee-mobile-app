@@ -16,6 +16,7 @@ import com.bsq.aee.R;
 import com.bsq.aee.databinding.ActivityMainBinding;
 import com.bsq.aee.di.component.ActivityComponent;
 import com.bsq.aee.ui.base.activity.BaseActivity;
+import com.bsq.aee.ui.main.account.AccountFragment;
 import com.bsq.aee.ui.main.favorite.FavoriteFragment;
 import com.bsq.aee.ui.main.home.HomeFragment;
 import com.bsq.aee.ui.main.search.SearchFragment;
@@ -35,6 +36,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel
     private UniversityFragment universityFragment;
     private SearchFragment searchFragment;
     private FavoriteFragment favoriteFragment;
+    private AccountFragment accountFragment;
     @Override
     public int getLayoutId() {
         return R.layout.activity_main;
@@ -92,6 +94,15 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel
                         fm.beginTransaction().hide(active).show(favoriteFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
                     }
                     active = favoriteFragment;
+                    return true;
+                case R.id.account:
+                    if (accountFragment == null){
+                        accountFragment = new AccountFragment();
+                        fm.beginTransaction().add(R.id.nav_host_fragment, accountFragment, ACCOUNT).hide(active).commitNow();
+                    } else {
+                        fm.beginTransaction().hide(active).show(accountFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
+                    }
+                    active = accountFragment;
                     return true;
                 default:
                     break;

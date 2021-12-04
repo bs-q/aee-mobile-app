@@ -8,4 +8,8 @@ public class AccountViewModel extends BaseFragmentViewModel {
     public AccountViewModel(Repository repository, MVVMApplication application) {
         super(repository, application);
     }
+
+    public void clearToken(){
+        repository.setToken(null);
+    }
 }

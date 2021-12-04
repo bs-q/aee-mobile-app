@@ -1,5 +1,6 @@
 package com.bsq.aee.ui.main.home;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -21,6 +22,7 @@ import com.bsq.aee.databinding.LayoutReplpyBinding;
 import com.bsq.aee.di.component.FragmentComponent;
 import com.bsq.aee.ui.base.activity.BaseCallback;
 import com.bsq.aee.ui.base.fragment.BaseFragment;
+import com.bsq.aee.ui.web.WebActivity;
 import com.bsq.aee.utils.SimpleRecyclerViewAdapter;
 
 import java.util.Objects;
@@ -89,7 +91,7 @@ public class HomeFragment extends BaseFragment<FragmentHomeBinding,HomeViewModel
             public void bindData(SimpleRecyclerViewAdapter.SimpleRecyclerViewAdapterViewHolder<LayoutHomeItemBinding> holder, int position) {
                 holder.getView().setItem(viewModel.newsResponseList.get(position));
                 holder.getView().getRoot().setOnClickListener(v -> {
-//                    navigateToFieldDetail(ApiModelUtils.toJson(holder.getView().getItem()));
+                    navigateToNewsActivity(holder.getView().getItem().getUrl());
                 });
                 holder.getView().executePendingBindings();
             }
@@ -105,5 +107,11 @@ public class HomeFragment extends BaseFragment<FragmentHomeBinding,HomeViewModel
         binding.recyclerView.addItemDecoration(vertical);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.recyclerView.setAdapter(adapter);
+    }
+
+    private void navigateToNewsActivity(String url){
+        WebActivity.setUrl(url);
+        Intent it = new Intent(requireContext(),WebActivity.class);
+        startActivity(it);
     }
 }

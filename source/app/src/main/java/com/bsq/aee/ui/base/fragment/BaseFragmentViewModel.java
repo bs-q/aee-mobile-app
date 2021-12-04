@@ -55,4 +55,16 @@ public class BaseFragmentViewModel extends ViewModel {
         super.onCleared();
         compositeDisposable.dispose();
     }
+    public String getFullName(){
+        return application.getFullName();
+    }
+    public void setFullName(String name){
+        application.setFullName(name);
+    }
+    public void setAvatarPath(String avatarPath){
+        application.setAvatarPath(avatarPath);
+    }
+    public String getAvatarPath(){
+        return application.getAvatarPath();
+    }
 }
