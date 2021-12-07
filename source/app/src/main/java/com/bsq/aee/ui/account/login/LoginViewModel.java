@@ -55,7 +55,9 @@ public class LoginViewModel extends BaseViewModel {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response -> {
                     if (response.isResult()){
-                        repository.setToken(repository.getToken());
+                        repository.setToken(response.getData().getToken());
+                        application.setAvatarPath(response.getData().getAvatarPath());
+                        application.setFullName(response.getData().getFullName());
                         callback.doSuccess();
                     } else {
                         callback.doFail();
@@ -88,6 +90,9 @@ public class LoginViewModel extends BaseViewModel {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response ->{
                     if (response.isResult()){
+                        setToken(response.getData().getToken());
+                        setAvatarPath(response.getData().getAvatarPath());
+                        setFullName(response.getData().getFullName());
                         callback.doSuccess();
                     } else {
                         callback.doFail();

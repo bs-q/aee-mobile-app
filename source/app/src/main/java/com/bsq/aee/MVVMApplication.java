@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bsq.aee.data.model.api.response.ProfileResponse;
 import com.bsq.aee.di.component.AppComponent;
 import com.bsq.aee.di.component.DaggerAppComponent;
 import com.bsq.aee.others.MyTimberDebugTree;
@@ -21,6 +22,14 @@ public class MVVMApplication extends Application{
 
     @Getter
     private AppComponent appComponent;
+
+    @Getter
+    @Setter
+    private String fullName;
+
+    @Getter
+    @Setter
+    private String avatarPath;
 
     @Override
     public void onCreate() {

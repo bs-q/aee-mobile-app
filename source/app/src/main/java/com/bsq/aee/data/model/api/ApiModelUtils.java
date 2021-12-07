@@ -63,7 +63,7 @@ public class ApiModelUtils {
         }
     }
 
-    public static String toJson(BaseResponse objects) {
+    public static String toJson(Object objects) {
         return GSON.toJson(objects);
     }
 

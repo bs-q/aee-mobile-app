@@ -76,9 +76,14 @@
 
 
 # Application
--keep class com.bsq.aee.data.model.db.BaseEntity**
--keepclassmembers class * extends com.bsq.aee.data.model.db.BaseEntity** { *;}
--keep class com.bsq.aee.data.model.api.request.BaseRequest**
--keepclassmembers class * extends com.bsq.aee.data.model.api.request.BaseRequest { *;}
--keep class com.bsq.aee.data.model.api.response.BaseResponse**
--keepclassmembers class * extends com.bsq.aee.data.model.api.response.BaseResponse { *;}
+#-keep class com.bsq.aee.data.model.db.BaseEntity**
+#-keepclassmembers class * extends com.bsq.aee.data.model.db.BaseEntity** { *;}
+#-keep class com.bsq.aee.data.model.api.request.BaseRequest**
+#-keepclassmembers class * extends com.bsq.aee.data.model.api.request.BaseRequest { *;}
+#-keep class com.bsq.aee.data.model.api.response.BaseResponse**
+#-keepclassmembers class * extends com.bsq.aee.data.model.api.response.BaseResponse { *;}
+
+-keep class com.bsq.aee.data.model.** { *; }
+
+# AndroidX
+-keep class androidx.lifecycle.** { *; }

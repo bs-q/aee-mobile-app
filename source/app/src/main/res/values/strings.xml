@@ -20,6 +20,16 @@
     <string name="already_have_account">Email đã được đăng kí</string>
     <string name="password_not_match">Mật khẩu không khớp</string>
     <string name="password_wrong_regex">Mật khẩu phải bao gồm cả chữ, số, viết hoa, viết thường và cả những kí tự đặc biệt</string>
+    <string name="old_password_wrong_regex">Mật khẩu cũ phải bao gồm cả chữ, số, viết hoa, viết thường và cả những kí tự đặc biệt</string>
     <string name="create_account_success">Tạo tài khoản thành công</string>
+    <string name="home">Trang chủ</string>
+    <string name="university">Trường</string>
+    <string name="search">Chat</string>
+    <string name="favorite">Yêu thích</string>
+    <string name="account">Tài khoản</string>
+    <string name="university_info">Thông tin</string>
+    <string name="university_fields">Ngành đào tạo</string>
+    <string name="date_format">%1$td/%1$tm/%1$tY</string>
+    <string name="format_price">%1$,.0f VNĐ</string>
 
 </resources>

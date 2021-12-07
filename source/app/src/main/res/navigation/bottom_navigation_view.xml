@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/home"
+    android:id="@+id/bottom_navigation_view">
+    <fragment android:id="@+id/home"
+        android:label="@string/home"
+        android:name="com.bsq.aee.ui.main.home.HomeFragment" />
+    <fragment android:id="@+id/university"
+        android:label="@string/university"
+        android:name="com.bsq.aee.ui.main.university.UniversityFragment" />
+    <fragment android:id="@+id/search"
+        android:label="@string/search"
+        android:name="com.bsq.aee.ui.main.search.SearchFragment" />
+    <fragment android:id="@+id/favorite"
+        android:label="@string/favorite"
+        android:name="com.bsq.aee.ui.main.favorite.FavoriteFragment" />
+    <fragment android:id="@+id/account"
+        android:label="@string/account"
+        android:name="com.bsq.aee.ui.main.account.AccountFragment" />
+</navigation>

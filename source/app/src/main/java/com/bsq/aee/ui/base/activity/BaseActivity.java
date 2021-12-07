@@ -23,6 +23,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.bsq.aee.MVVMApplication;
 import com.bsq.aee.R;
 import com.bsq.aee.constant.Constants;
+import com.bsq.aee.data.model.api.response.ProfileResponse;
 import com.bsq.aee.di.component.ActivityComponent;
 import com.bsq.aee.di.component.DaggerActivityComponent;
 import com.bsq.aee.di.module.ActivityModule;

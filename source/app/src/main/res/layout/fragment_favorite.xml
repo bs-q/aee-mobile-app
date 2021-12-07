@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="f"
+            type="com.bsq.aee.ui.main.favorite.FavoriteFragment" />
+        <variable
+            name="vm"
+            type="com.bsq.aee.ui.main.favorite.FavoriteViewModel" />
+    </data>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingVertical="@dimen/_8sdp"
+        android:id="@+id/rc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</layout>

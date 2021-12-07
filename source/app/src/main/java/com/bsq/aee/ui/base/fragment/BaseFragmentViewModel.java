@@ -8,6 +8,7 @@ import com.bsq.aee.MVVMApplication;
 import com.bsq.aee.data.Repository;
 import com.bsq.aee.data.model.other.ToastMessage;
 
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import lombok.Setter;
 
 public class BaseFragmentViewModel extends ViewModel {
@@ -16,7 +17,7 @@ public class BaseFragmentViewModel extends ViewModel {
     protected final MVVMApplication application;
     protected final MutableLiveData<ToastMessage> mErrorMessage = new MutableLiveData<>();
     protected final ObservableBoolean mIsLoading = new ObservableBoolean();
-
+    protected final CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     @Setter
     protected String token;
@@ -47,5 +48,23 @@ public class BaseFragmentViewModel extends ViewModel {
 
     public void hideLoading(){
         mIsLoading.set(false);
+    }
+
+    @Override
+    protected void onCleared() {
+        super.onCleared();
+        compositeDisposable.dispose();
+    }
+    public String getFullName(){
+        return application.getFullName();
+    }
+    public void setFullName(String name){
+        application.setFullName(name);
+    }
+    public void setAvatarPath(String avatarPath){
+        application.setAvatarPath(avatarPath);
+    }
+    public String getAvatarPath(){
+        return application.getAvatarPath();
     }
 }

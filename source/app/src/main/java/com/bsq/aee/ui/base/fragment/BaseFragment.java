@@ -13,6 +13,7 @@ import androidx.databinding.Observable;
 import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.Fragment;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.bsq.aee.MVVMApplication;
 import com.bsq.aee.R;
@@ -25,7 +26,13 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 
-public abstract class BaseFragment <B extends ViewDataBinding,V extends BaseFragmentViewModel> extends Fragment {
+public abstract class BaseFragment <B extends ViewDataBinding,V extends BaseFragmentViewModel> extends Fragment
+implements View.OnClickListener {
+
+    @Override
+    public void onClick(View v) {
+
+    }
 
     protected B binding;
     @Inject
@@ -101,5 +108,4 @@ public abstract class BaseFragment <B extends ViewDataBinding,V extends BaseFrag
             progressDialog = null;
         }
     }
-
 }

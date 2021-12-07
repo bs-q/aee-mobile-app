@@ -4,12 +4,14 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
 <!--        <item name="fontFamily">@font/application_font</item>-->
-        <item name="android:fontFamily">@font/application_font</item>
+        <item name="fontFamily">@font/opensans</item>
+        <item name="android:fontFamily">@font/opensans</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowBackground">@color/background</item>
         <!-- navigation icon color -->
         <item name="colorControlNormal">@color/background</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorAccent">@color/gray_text</item>
     </style>
 
     <style name="CustomLoadingDialog" parent="Theme.AppCompat.Dialog">
@@ -34,4 +36,36 @@
         <item name="cornerSize">@dimen/_20sdp</item>
     </style>
 
+    <style name="news_shape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12%</item>
+    </style>
+    <style name="avatarRound" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="post_title">
+        <item name="fontFamily">@font/montserratalternates_extrabold</item>
+        <item name="android:fontFamily">@font/montserratalternates_extrabold</item>
+    </style>
+    <style name="post_content">
+        <item name="fontFamily">@font/montserratalternates_medium</item>
+        <item name="android:fontFamily">@font/montserratalternates_medium</item>
+    </style>
+    <style name="semibold">
+        <item name="fontFamily">@font/montserratalternates_semibold</item>
+        <item name="android:fontFamily">@font/montserratalternates_semibold</item>
+    </style>
+    <style name="text_normal">
+        <item name="fontFamily">@font/montserratalternates_regular</item>
+        <item name="android:fontFamily">@font/montserratalternates_regular</item>
+    </style>
+    <style name="description">
+        <item name="fontFamily">@font/opensans</item>
+        <item name="android:fontFamily">@font/opensans</item>
+    </style>
+    <style name="title_bold">
+        <item name="fontFamily">@font/montserratalternates_bold</item>
+        <item name="android:fontFamily">@font/montserratalternates_bold</item>
+    </style>
 </resources>
