@@ -7,7 +7,7 @@
 node_modules/
 dist/
 build
-app/release
+#app/release
 
 # Compiled Java class files
 *.class
