@@ -35,6 +35,7 @@
             android:value="AIzaSyAbgWMc4w9mE1C5nEVpLaM6ZUgV7qyvV0s" />
         <activity android:name=".ui.account.login.LoginActivity"
             android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,16 +43,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.account.register.RegisterActivity" />
+        <activity android:name=".ui.account.register.RegisterActivity"
+            android:screenOrientation="portrait"
+            />
         <activity android:name=".ui.main.MainActivity"
-            android:exported="true"/>
-        <activity android:name=".ui.main.search.create.CreatePostActivity" />
-        <activity android:name=".ui.main.search.detail.PostDetailActivity" />
-        <activity android:name=".ui.main.university.details.UniversityDetailsActivity" />
-        <activity android:name=".ui.main.university.field.FieldDetailActivity" />
-        <activity android:name=".ui.web.WebActivity" />
-        <activity android:name=".ui.account.password.ChangePasswordActivity" />
-        <activity android:name=".ui.account.post.MyPostActivity" />
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.main.search.create.CreatePostActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.main.search.detail.PostDetailActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.main.university.details.UniversityDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.main.university.field.FieldDetailActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.web.WebActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.account.password.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.account.post.MyPostActivity"
+            android:screenOrientation="portrait"
+            />
 
         <meta-data
             android:name="com.google.android.gms.version"
