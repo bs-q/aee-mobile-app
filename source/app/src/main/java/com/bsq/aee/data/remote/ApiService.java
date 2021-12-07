@@ -29,65 +29,65 @@ import retrofit2.http.Query;
 
 public interface ApiService {
 
-    @POST("auth/login")
+    @POST("api/auth/login")
     @Headers({"IgnoreAuth: 1"})
     Observable<ResponseWrapper<LoginResponse>> login(@Body LoginRequest request);
 
-    @POST("auth/login-google")
+    @POST("api/auth/login-google")
     @Headers({"IgnoreAuth: 1"})
     Observable<ResponseWrapper<LoginResponse>> loginWithGoogle(@Body LoginWithGoogleRequest request);
 
-    @GET("u/profile")
+    @GET("api/u/profile")
     Observable<ResponseWrapper<ProfileResponse>> profile();
 
-    @GET("u/discussion/get-posts")
+    @GET("api/u/discussion/get-posts")
     Observable<ResponseListObj<PostResponse>> getPosts(@Query("size") Integer size,
                                                        @Query("currentPage") Integer page);
 
-    @GET("u/discussion/get-replies")
+    @GET("api/u/discussion/get-replies")
     Observable<ResponseListObj<ReplyResponse>> getReplies(@Query("size") Integer size,
                                                           @Query("page") Integer page,
                                                           @Query("postId") long id);
 
-    @GET("u/list-university")
+    @GET("api/u/list-university")
     Observable<ResponseListObj<UniversityResponse>> getUniversities(@Query("size") Integer size,
                                                                     @Query("page") Integer page);
-    @GET("u/list-field/{id}")
+    @GET("api/u/list-field/{id}")
     Observable<ResponseWrapper<List<FieldResponse>>> getField(@Path("id") long id);
 
-    @GET("u/list-news")
+    @GET("api/u/list-news")
     Observable<ResponseWrapper<List<NewsResponse>>> getNews();
 
-    @GET("u/get-favorite")
+    @GET("api/u/get-favorite")
     Observable<ResponseListObj<FieldResponse>> getFavorite();
 
-    @POST("u/add-favorite/{id}")
+    @POST("api/u/add-favorite/{id}")
     Observable<ResponseWrapper<String>> addFavorite(@Path("id") long id);
 
-    @GET("u/my-post")
+    @GET("api/u/my-post")
     Observable<ResponseWrapper<List<PostResponse>>> myPost();
 
-    @POST("u/change-password")
+    @POST("api/u/change-password")
     Observable<ResponseWrapper<String>> changePassword(@Body ChangePasswordRequest request);
 
-    @GET("u/search-university")
+    @GET("api/u/search-university")
     Observable<ResponseWrapper<List<UniversityResponse>>> searchUniversity(@Query("name") String name);
 
-    @GET("u/search-post")
+    @GET("api/u/search-post")
     Observable<ResponseWrapper<List<PostResponse>>> searchPost(@Query("title") String title);
 
-    @POST("u/discussion/reply-post")
+    @POST("api/u/discussion/reply-post")
     Observable<ResponseWrapper<String>> reply(@Body ReplyRequest request);
 
-    @POST("u/discussion/create-post")
+    @POST("api/u/discussion/create-post")
     Observable<ResponseWrapper<String>> createPost(@Body CreatePostRequest request);
 
-    @POST("auth/check-register")
+    @POST("api/auth/check-register")
     @Headers({"IgnoreAuth: 1"})
     Observable<ResponseWrapper<String>> checkRegister(@Body CheckAccountRequest request);
 
 
-    @POST("auth/register")
+    @POST("api/auth/register")
     @Headers({"IgnoreAuth: 1"})
     Observable<ResponseWrapper<String>> register(@Body CreateAccountRequest request);
 
