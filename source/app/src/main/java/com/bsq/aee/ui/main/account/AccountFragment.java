@@ -13,6 +13,9 @@ import com.bsq.aee.ui.account.login.LoginActivity;
 import com.bsq.aee.ui.account.password.ChangePasswordActivity;
 import com.bsq.aee.ui.account.post.MyPostActivity;
 import com.bsq.aee.ui.base.fragment.BaseFragment;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 
 public class AccountFragment extends BaseFragment<FragmentAccountBinding,AccountViewModel>
 implements View.OnClickListener {
@@ -25,6 +28,7 @@ implements View.OnClickListener {
     protected int getLayoutId() {
         return R.layout.fragment_account;
     }
+    private GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void performDataBinding() {
@@ -32,6 +36,11 @@ implements View.OnClickListener {
         binding.setVm(viewModel);
         binding.setEmail(viewModel.getFullName());
         binding.setAvatarUrl(viewModel.getAvatarPath());
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(requireContext(), gso);
 
     }
 
@@ -63,6 +72,7 @@ implements View.OnClickListener {
         startActivity(it);
     }
     private void navigateToLogin(){
+        mGoogleSignInClient.signOut();
         viewModel.clearToken();
         Intent it = new Intent(requireContext(), LoginActivity.class);
         startActivity(it);
