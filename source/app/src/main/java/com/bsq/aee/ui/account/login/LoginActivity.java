@@ -157,6 +157,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
             public void doSuccess() {
                 // TODO login success
                 viewModel.showSuccessMessage("Login success");
+                mGoogleSignInClient.signOut();
                 navigateToMainActivity();
             }
 
