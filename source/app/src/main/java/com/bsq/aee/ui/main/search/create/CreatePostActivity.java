@@ -53,6 +53,7 @@ implements View.OnClickListener {
                 @Override
                 public void doSuccess() {
                     viewModel.hideLoading();
+                    viewModel.showSuccessMessage("Bài viết của bạn đã được đăng");
                     finish();
                 }
 

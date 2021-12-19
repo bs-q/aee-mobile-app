@@ -74,6 +74,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
                 viewModel.showErrorMessage(getString(R.string.login_fail));
             }
         }
+        viewModel.hideLoading();
         mGoogleSignInClient.signOut();
 
     });
