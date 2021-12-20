@@ -133,7 +133,10 @@ public class UniversityFragment extends BaseFragment<FragmentUniversityBinding,U
             binding.searchBar.getRoot().setVisibility(
                     binding.searchBar.getRoot().getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
         } else if (v.getId() == R.id.search_btn){
-            if (binding.searchBar.getSearch().get().isEmpty()) return;
+            if (binding.searchBar.getSearch().get().isEmpty()) {
+                viewModel.showErrorMessage("Vui lòng nhập nội dung");
+                return;
+            }
             DeviceUtils.hideSoftKeyboard(requireActivity());
             viewModel.showLoading();
             viewModel.search(binding.searchBar.getSearch().get(), new BaseCallback() {

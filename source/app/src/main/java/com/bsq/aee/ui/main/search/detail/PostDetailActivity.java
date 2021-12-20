@@ -117,7 +117,10 @@ public class PostDetailActivity extends BaseActivity<ActivityPostDetailBinding,P
         } 
     }
     private void doReply(){
-        if (Objects.requireNonNull(viewModel.reply.get()).isEmpty()) return;
+        if (Objects.requireNonNull(viewModel.reply.get()).isEmpty()) {
+            viewModel.showErrorMessage("Vui lòng nhập nội dung");
+            return;
+        }
         viewModel.showLoading();
         viewModel.reply(new BaseCallback() {
             @Override
@@ -138,7 +141,7 @@ public class PostDetailActivity extends BaseActivity<ActivityPostDetailBinding,P
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void doSuccess() {
-                        viewModel.showSuccessMessage("Bình luận của bạn đã đăng");
+                        viewModel.showSuccessMessage("Bình luận của bạn đã được đăng");
 
                         viewModel.reply.set("");
                         hideKeyboard();

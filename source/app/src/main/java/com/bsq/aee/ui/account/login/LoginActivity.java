@@ -147,6 +147,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
                 });
     }
     private void loginWithGoogle(){
+        viewModel.showLoading();
         viewModel.doLoginWithGoogle(new BaseCallback() {
             @Override
             public void doError(Throwable error) {
@@ -156,7 +157,6 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
 
             @Override
             public void doSuccess() {
-                // TODO login success
                 viewModel.showSuccessMessage("Login success");
                 mGoogleSignInClient.signOut();
                 navigateToMainActivity();
@@ -170,6 +170,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
         });
     }
     private void checkRegister() {
+        viewModel.showLoading();
         viewModel.checkRegister(new BaseCallback() {
             @Override
             public void doError(Throwable error) {
@@ -247,7 +248,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
 
             @Override
             public void doSuccess() {
-                viewModel.showSuccessMessage("Login success");
+                viewModel.showSuccessMessage("Đăng nhập thành công");
                 viewModel.hideLoading();
                 navigateToMainActivity();
             }
