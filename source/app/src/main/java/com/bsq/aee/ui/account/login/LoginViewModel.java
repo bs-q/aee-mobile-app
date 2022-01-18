@@ -75,7 +75,8 @@ public class LoginViewModel extends BaseViewModel {
                         .subscribe(response -> {
                             if (response.isResult()){
                                 repository.setToken(response.getData().getToken());
-                                callback.doSuccess();
+                                application.setAvatarPath(response.getData().getAvatarPath());
+                                application.setFullName(response.getData().getFullName());                                callback.doSuccess();
                             } else {
                                 callback.doFail();
                             }
